@@ -1,10 +1,5 @@
-# laminas-mvc-skeleton
+# Application de gestion de procès verbal de soutenance
 
-## Introduction
-
-This is a skeleton application using the Laminas MVC layer and module
-systems. This application is meant to be used as a starting place for those
-looking to get their feet wet with Laminas MVC.
 
 ## Installation using Composer
 
@@ -14,17 +9,14 @@ then please install as per the [documentation](https://getcomposer.org/doc/00-in
 
 To create your new Laminas MVC project:
 
-```bash
-$ composer create-project -sdev laminas/laminas-mvc-skeleton path/to/install
+```
+composer install
 ```
 
 Once installed, you can test it out immediately using PHP's built-in web server:
 
-```bash
-$ cd path/to/install
-$ php -S 0.0.0.0:8080 -t public
-# OR use the composer alias:
-$ composer run --timeout 0 serve
+```
+composer run --timeout 0 serve
 ```
 
 This will start the cli-server on port 8080, and bind it to all network
