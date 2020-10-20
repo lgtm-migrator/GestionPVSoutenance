@@ -1,0 +1,163 @@
+
+<div class="wrapper">
+
+  <!-- Navbar -->
+ 
+  <!-- /.navbar -->
+  <?php
+  include "navbar.php";
+  include "sidebar.php";
+  ?>
+
+ 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <!-- <h1 class="m-0 text-dark">Dashboard</h1> -->
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <!-- <li class="breadcrumb-item"><a href="#">Accueil</a></li> -->
+              <!-- <li class="breadcrumb-item active">Dashboard v1</li> -->
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+  
+
+    <!-- section fictive juste pour tester les anciens codes -->
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+   
+
+          
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">La liste des étudiants</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="listeEtud" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                      <th>Matricule</th>
+                      <th>Nom</th>
+                      <th>Prenom</th>
+                      <th>Date de naissance</th>
+                      <th>Lieu</th>
+                      <th>Filiere</th>
+                      <th>Sexe</th>
+                      <th>Statut</th>
+                      <th>Actions <i class="fa fa-cogs"></i></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <?php foreach ($albums as $album) : ?>
+                   <?php 
+                          if ( $this->escapeHtml($album->statut) ==0){
+                            $statut = '<span class="badge badge-danger">Non programmé</span>';
+                          }else if ( $this->escapeHtml($album->statut) ==1){
+                            $statut = '<span class="badge badge-warning">Programmé/Non soutenu</span>' ;
+                          }else if ( $this->escapeHtml($album->statut) ==2){
+                            $statut ='<span class="badge badge-success">Programmé/Soutenu</span>' ;
+                          }
+                           
+                    ?>
+                      <tr>
+                          <td><?= $this->escapeHtml($album->matricule) ?></td>
+                          <td><?= $this->escapeHtml($album->nomEtudiant) ?></td>
+                          <td><?= $this->escapeHtml($album->prenomEtudiant) ?></td>
+                          <td><?= $this->escapeHtml($album->dateNaissance) ?></td>
+                          <td><?= $this->escapeHtml($album->lieuNaissance) ?></td>
+                          <td><?= $this->escapeHtml($album->filiere) ?></td>
+                          <td><?= $this->escapeHtml($album->sexe) ?></td>
+                          <td><?php echo $statut ?></td>
+                          <td>
+                              <a href="<?= $this->url('album', ['action' => 'edit', 'id' => $album->id]) ?>" class="btn btn-info btn-sm"><i class="far fa-edit"></i>Editer</a>
+                              <!-- <a href="<?//= $this->url('album', ['action' => 'delete', 'id' => $album->id]) ?>" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-danger"><i class="fa fa-trash-alt"></i>Supprimer</a> -->
+                              <a href="<?= $this->url('album', ['action' => 'delete', 'id' => $album->id]) ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i>Supprimer</a>
+                          </td>
+                      </tr>
+                  <?php endforeach; ?>
+               
+                  </tbody>
+                  <tfoot>
+                 <tr>
+                      <th>Matricule</th>
+                      <th>Nom</th>
+                      <th>Prenom</th>
+                      <th>Date de naissance</th>
+                      <th>Lieu</th>
+                      <th>Filiere</th>
+                      <th>Sexe</th>
+                      <th>Statut</th>
+                      <th>Actions <i class="fa fa-cogs"></i></th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <?php
+    include "footer.php";
+  ?>
+  <?php
+// module/Album/view/album/album/delete.phtml:
+$url   = $this->url('album', ['action' => 'delete', 'id' => $id]);
+
+?>
+ <div class="modal fade" id="modal-danger">
+  <div class="modal-dialog">
+    <div class="modal-content bg-danger">
+      <div class="modal-header">
+        <h4 class="modal-title">Confirmer la suppression</h4>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>
+          "<?= $this->escapeHtml($album->nom) ?>" 
+          "<?= $this->escapeHtml($album->prenom) ?>"?
+          
+      </p>
+      
+      </div>
+     <form action="<?= $url ?>" method="post">
+      <div class="modal-footer justify-content-between">
+        <input type="hidden" name="id" value="<?= (int) $album->id ?>" /> 
+        <button type="button" class="btn btn-outline-light" data-dismiss="modal"  name="del" value="No">Annuler</button>
+        <button type="button" class="btn btn-outline-light" name="del" value="Yes">Confirmer</button>
+      </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

@@ -1,0 +1,167 @@
+
+    <div class="wrapper">
+        <!-- Navbar -->
+       
+        <!-- /.navbar -->
+        <?php
+        include 'navbar.php';
+        include "sidebar.php";
+        
+  
+  ?>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            
+
+
+
+ <?php
+// This provides a default CSS class and placeholder text for the title element:
+    $nom = $form->get('nomMaitre');
+    $nom->setAttribute('class', 'form-control');
+    $nom->setAttribute('placeholder', 'Nom du maitre de stage');
+    
+    $prenom = $form->get('prenomMaitre');
+    $prenom->setAttribute('class', 'form-control');
+    $prenom->setAttribute('placeholder', 'Prenom du maitre de stage');
+    
+    
+    $code = $form->get('codeMaitre');
+    $code->setAttribute('class', 'form-control');
+    $code->setAttribute('placeholder', 'Code du maitre de stage');
+    
+    $grade = $form->get('etablissementReference');
+    $grade->setAttribute('class', 'form-control');
+    $grade->setAttribute('placeholder', 'Etablissement de reference');
+    
+    $matricule = $form->get('adresseMaitre');
+    $matricule->setAttribute('class', 'form-control');
+    $matricule->setAttribute('placeholder', 'Adresse du maitre de stage');
+
+    $sexe = $form->get('sexeMaitre');
+    $sexe->setAttribute('class', 'form-control');
+    $sexe->setAttribute('placeholder', 'Sexe du maitre de stage');
+
+// This provides CSS classes for the submit button:
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-primary ajoutSuccess');
+
+$form->setAttribute('action', $this->url('maitre', ['action' => 'add']));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+?>
+
+
+
+
+
+
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Formulaire</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form role="form">
+                                    <div class="card-body">
+
+                                        
+                                   
+                                        <div class="form-group">
+                                            
+                                            <?= $this->formLabel($nom) ?>
+                                            <?= $this->formElement($nom)  ?>
+                                            <?= $this->formElementErrors()->render($nom, ['class' => ' help-block']) ?>
+                                        </>
+                                        <div class="form-group">
+                                           
+                                            <?= $this->formLabel($prenom) ?>
+                                            <?= $this->formElement($prenom) ?>
+                                            <?= $this->formElementErrors()->render($prenom, ['class' => 'help-block']) ?>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                           
+                                               <?= $this->formLabel($code) ?>
+                                                <?= $this->formElement($code) ?>
+                                                <?= $this->formElementErrors()->render($code, ['class' => ' help-block']) ?>
+                                        </div>
+                                     
+                                        <div class="form-group">
+                                            <?= $this->formLabel($grade) ?>
+                                            <select class="form-control select2" name="etablissementReference" style="width: 100%;">
+                                                <option selected="selected">UO</option>
+                                                
+                                                <option>IAM</option>
+                                                
+                                                
+                                            </select>
+                                             <?= $this->formElementErrors()->render($grade, ['class' => ' help-block']) ?>
+                                        </div>
+                                     
+                                       
+                                        <div class="form-group">
+                                           
+                                                <?= $this->formLabel($matricule) ?>
+                                                <?= $this->formElement($matricule) ?>
+                                                <?= $this->formElementErrors()->render($matricule, ['class' => ' help-block']) ?>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <?= $this->formLabel($sexe) ?>
+                                            <select class="form-control select2" name="sexeMaitre" style="width: 100%;">
+                                                <option selected="selected">Masculin</option>
+                                                
+                                                <option>Féminin</option>
+                                                
+                                                
+                                            </select>
+                                             <?= $this->formElementErrors()->render($sexe, ['class' => ' help-block']) ?>
+                                        </div>
+                                     
+                                        <div class="card-footer">
+                                        
+                                        
+                                            <?php
+                                            echo $this->formSubmit($submit);
+                                            echo $this->formHidden($form->get('id'));
+                                            echo $this->form()->closeTag();?>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- /.card-body -->
+
+                                    
+                                </form>
+                            </div>
+                           
+
+                        </div>
+                      
+                          
+                        </div>
+                        <!--/.col (right) -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <?php
+    include "footer.php";
+
+  ?>
+

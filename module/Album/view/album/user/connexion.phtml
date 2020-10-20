@@ -1,0 +1,82 @@
+
+<?php
+    
+// This provides CSS classes for the submit button:
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-primary btn-block');
+
+$form->setAttribute('action', $this->url('user', ['action' => 'connexion']));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+?>
+<div class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../../index2.html"><b>Master</b>Gest</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg btn-block btn-primary">Veuillez vous connecter</p>
+
+      <form method="post">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name ="login" placeholder="Identifiant">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" name="pass" placeholder="Mot de passe">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+              <label for="remember">
+                Se souvenir de moi
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+              <?php
+              echo $this->formSubmit($submit);
+              echo $this->formHidden($form->get('login'));
+              echo $this->form()->closeTag();?>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+        <div class="social-auth-links text-center mb-3">
+        <p>- OU -</p>
+        <a href="#" class="btn btn-block btn-primary">
+          <i class="fab fa-facebook mr-2"></i> Me connecter avec Facebook
+        </a>
+        <a href="#" class="btn btn-block btn-danger">
+          <i class="fab fa-google mr-2"></i> Me connecter avec Google
+        </a>
+      </div>
+      <!-- /.social-auth-links -->
+<!-- 
+      <p class="mb-1">
+        <a href="forgot-password.html">Mot de passe oublié</a>
+      </p>
+      <p class="mb-0">
+        <a href="register.html" class="text-center">Créer un nouveau compte</a>
+      </p> -->
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
+
+</div>

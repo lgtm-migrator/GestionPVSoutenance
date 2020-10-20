@@ -1,0 +1,170 @@
+
+    <div class="wrapper">
+        <!-- Navbar -->
+       
+        <!-- /.navbar -->
+        <?php
+
+        include "navbar.php";
+        include "sidebar.php";
+  
+  ?>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            
+
+<?php
+$nom = $form->get('nomEtudiant');
+$nom->setAttribute('class', 'form-control');
+$nom->setAttribute('placeholder', 'votre nom');
+
+$prenom = $form->get('prenomEtudiant');
+$prenom->setAttribute('class', 'form-control');
+$prenom->setAttribute('placeholder', 'votre prenom');
+
+$dateN = $form->get('dateNaissance');
+$dateN->setAttribute('placeholder', 'date de naissance ');
+$dateN->setAttribute('class', 'form-control datetimepicker-input');
+$dateN->setAttribute('data-target', '#reservationdate');
+
+
+$lieu = $form->get('lieuNaissance');
+$lieu->setAttribute('class', 'form-control');
+$lieu->setAttribute('placeholder', 'votre lieu de naissance');
+
+$filiere = $form->get('filiere');
+$filiere->setAttribute('class', 'form-control');
+$filiere->setAttribute('placeholder', 'votre filiere de formation');
+
+$matricule = $form->get('matricule');
+$matricule->setAttribute('class', 'form-control');
+$matricule->setAttribute('placeholder', 'votre matricule');
+
+$sexe = $form->get('sexe');
+$sexe->setAttribute('class', 'form-control');
+$sexe->setAttribute('placeholder', 'votre matricule');
+
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-primary');
+
+$form->setAttribute('action', $this->url('album', [
+    'action' => 'edit',
+    'id'     => $id,
+]));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+?>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Formulaire</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form role="form">
+                                    <div class="card-body">
+                                   
+                                        <div class="form-group">
+                                            
+                                            <?= $this->formLabel($nom) ?>
+                                            <?= $this->formElement($nom)  ?>
+                                            <?= $this->formElementErrors()->render($nom, ['class' => ' help-block']) ?>
+                                        </div>
+                                        <div class="form-group">
+                                           
+                                            <?= $this->formLabel($prenom) ?>
+                                            <?= $this->formElement($prenom) ?>
+                                            <?= $this->formElementErrors()->render($prenom, ['class' => 'help-block']) ?>
+                                        </div>
+                                        
+                                       
+                                       
+                                                 <?= $this->formLabel($dateN) ?>
+                                                <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                                   
+                                                    <?= $this->formElement($dateN)  ?>
+                                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                    </div>
+                                                </div>
+                                                <?= $this->formElementErrors()->render($dateN, ['class' => 'help-block']) ?>
+                                        <div class="form-group">
+                                           
+                                               <?= $this->formLabel($lieu) ?>
+                                                <?= $this->formElement($lieu) ?>
+                                                <?= $this->formElementErrors()->render($lieu, ['class' => ' help-block']) ?>
+                                        </div>
+                                        <div class="form-group">
+                                           
+                                                <?= $this->formLabel($filiere) ?>
+                                                <?= $this->formElement($filiere) ?>
+                                                <?= $this->formElementErrors()->render($filiere, ['class' => 'help-block']) ?>
+                                        </div>
+                                        <div class="form-group">
+                                           
+                                                <?= $this->formLabel($matricule) ?>
+                                                <?= $this->formElement($matricule) ?>
+                                                <?= $this->formElementErrors()->render($matricule, ['class' => ' help-block']) ?>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <?= $this->formLabel($sexe) ?>
+                                            <select class="form-control select2" name="sexe" style="width: 100%;">
+                                                <option>Masculin</option>
+                                                
+                                                <option>Féminin</option>
+                                                
+                                                
+                                            </select>
+                                             <?= $this->formElementErrors()->render($sexe, ['class' => ' help-block']) ?>
+                                        </div>
+                                     
+                                        <div class="card-footer">
+                                        
+                                        
+                                        <?php
+                                       echo $this->formSubmit($submit);
+                                        echo $this->formHidden($form->get('id'));
+                                        echo $this->form()->closeTag();?>
+                                    </div>
+                                        
+                                    </div>
+                                    <!-- /.card-body -->
+
+                                    
+                                </form>
+                            </div>
+                           
+
+                        </div>
+                      
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!--/.col (right) -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <?php
+    include "footer.php";
+
+  ?>
+

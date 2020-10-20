@@ -1,0 +1,181 @@
+
+    <div class="wrapper">
+        <!-- Navbar -->
+       
+        <!-- /.navbar -->
+        <?php
+        include 'navbar.php';
+        include "sidebar.php";
+        
+  
+  ?>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            
+
+
+
+ <?php
+// This provides a default CSS class and placeholder text for the title element:
+    $cj = $form->get('codeJury');
+    $cj->setAttribute('class', 'form-control');
+    $cj->setAttribute('placeholder', 'Code du jury');
+    
+    $cp = $form->get('codePresident');
+    $cp->setAttribute('class', 'form-control');
+    $cp->setAttribute('placeholder', 'Président du jury');
+    
+    $cd = $form->get('codeDirecteur');
+    $cd->setAttribute('class', 'form-control');
+    $cd->setAttribute('placeholder', 'Directeur de stage');
+    
+    $cm = $form->get('codeMaitre');
+    $cm->setAttribute('class', 'form-control');
+    $cm->setAttribute('placeholder', 'Maitre de stage');
+    
+    $ci = $form->get('codeInvite');
+    $ci->setAttribute('class', 'form-control');
+    $ci->setAttribute('placeholder', 'Membre invité');
+    
+
+// This provides CSS classes for the submit button:
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-primary ajoutSuccess');
+
+$form->setAttribute('action', $this->url('jury', ['action' => 'add']));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+// var_dump(presidents);
+
+?>
+
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Formulaire</h3>
+                                   
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form role="form">
+                                    <div class="card-body">
+
+                                    
+                                   
+                                        <div class="form-group">
+                                            
+                                            <?= $this->formLabel($cj) ?>
+                                            <?= $this->formElement($cj)  ?>
+                                            <?= $this->formElementErrors()->render($cj, ['class' => ' help-block']) ?>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <?= $this->formLabel($cp) ?>
+                                            <select class="form-control select2" name="codePresident" style="width: 100%;">
+                                                   
+
+                                                <?php
+                                            
+                                               /* var_dump(president);
+                                                foreach ($president as $president) : ?>
+                                                     
+                                                    <option><?= $this->escapeHtml($president->nomPresident) ?><?= $this->escapeHtml($president->prenomPresident) ?></option>  
+                                                <?php endforeach;*/ ?>
+                                             <option> Blaise KONE</option> 
+                                             <option> Gilbert BAYILI</option> 
+                                             <option> Yaya TRAORE</option> 
+                                             <option> Lydie KONE</option> 
+                                             <option> Virginie OUEDRAOGO</option> 
+                                             
+                                            </select>
+                                             <?= $this->formElementErrors()->render($cp, ['class' => ' help-block']) ?>
+                                        </div>
+                                        
+                                         <div class="form-group">
+                                            <?= $this->formLabel($cd) ?>
+                                            <select class="form-control select2" name="codeDirecteur" style="width: 100%;">
+                                            <option> Virginie OUEDRAOGO</option> 
+                                            <option> Blaise KONE</option> 
+                                             <option> Gilbert BAYILI</option> 
+                                             <option> Yaya TRAORE</option> 
+                                             <option> Lydie KONE</option> 
+                                            
+                                                
+                                                
+                                            </select>
+                                             <?= $this->formElementErrors()->render($cd, ['class' => ' help-block']) ?>
+                                        </div>
+                                         <div class="form-group">
+                                            <?= $this->formLabel($cm) ?>
+                                            <select class="form-control select2" name="codeMaitre" style="width: 100%;">
+                                            <option> Yaya TRAORE</option> 
+                                                 <option> Blaise KONE</option> 
+                                             <option> Gilbert BAYILI</option> 
+                                              
+                                             <option> Lydie KONE</option> 
+                                             <option> Virginie OUEDRAOGO</option> 
+                                                
+                                                
+                                            </select>
+                                             <?= $this->formElementErrors()->render($cm, ['class' => ' help-block']) ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <?= $this->formLabel($ci) ?>
+                                            <select class="form-control select2" name="codeInvite" style="width: 100%;">
+                                                
+                                             <option> Gilbert BAYILI</option> 
+                                             <option> Yaya TRAORE</option> 
+                                             <option> Blaise KONE</option> 
+                                             <option> Lydie KONE</option> 
+                                             <option> Virginie OUEDRAOGO</option> 
+                                                
+                                                
+                                            </select>
+                                             <?= $this->formElementErrors()->render($ci, ['class' => ' help-block']) ?>
+                                        </div>
+                                     
+                                     
+                                        <div class="card-footer">
+                                        
+                                        
+                                            <?php
+                                            echo $this->formSubmit($submit);
+                                            echo $this->formHidden($form->get('id'));
+                                            echo $this->form()->closeTag();?>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- /.card-body -->
+
+                                    
+                                </form>
+                            </div>
+                           
+
+                        </div>
+                      
+                          
+                        </div>
+                        <!--/.col (right) -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <?php
+    include "footer.php";
+
+  ?>

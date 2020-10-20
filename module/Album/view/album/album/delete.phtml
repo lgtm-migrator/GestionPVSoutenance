@@ -1,0 +1,76 @@
+
+    <div class="wrapper">
+        <!-- Navbar -->
+       
+        <!-- /.navbar -->
+        <?php
+
+        include "navbar.php";
+        include "sidebar.php";
+  
+  ?>
+
+  <?php
+// module/Album/view/album/album/delete.phtml:
+
+$url   = $this->url('album', ['action' => 'delete', 'id' => $id]);
+
+?>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+                  
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Supprimer un étudiant</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card card-body">
+                                                            <p>
+                                Êtes vous sûr de vouloir supprimer définitivement?
+                                    "<?= $this->escapeHtml($album->nomEtudiant) ?>" 
+                                    "<?= $this->escapeHtml($album->prenomEtudiant) ?>"?
+                                    
+                                </p>
+
+                                <form action="<?= $url ?>" method="post">
+                                <div class="form-group">
+                                    <input type="hidden" name="id" value="<?= (int) $album->id ?>" />
+                                    <input type="submit" class="btn btn-danger" name="del" value="OUI" />
+                                    <input type="submit" class="btn btn-success" name="del" value="NON" />
+                                </div>
+                                </form>
+                                </div>
+                                
+                            </div>
+                           
+
+                        </div>
+                      
+                            
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!--/.col (right) -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <?php
+    include "footer.php";
+
+  ?>
+

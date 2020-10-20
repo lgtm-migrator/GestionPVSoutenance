@@ -1,0 +1,205 @@
+
+<div class="wrapper">
+
+  <!-- Navbar -->
+ 
+  <!-- /.navbar -->
+  <?php
+  include "navbar.php";
+  include "sidebar.php";
+  $i = 0;
+  $t = 0;
+  $p = 0;
+  $z = 0;
+  ?>
+
+ 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <!-- <h1 class="m-0 text-dark">Dashboard</h1> -->
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <!-- <li class="breadcrumb-item"><a href="#">Accueil</a></li> -->
+              <!-- <li class="breadcrumb-item active">Dashboard v1</li> -->
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+     <?php foreach ($albums as $album) : ?>
+        <?php 
+            if ( $this->escapeHtml($album->id)){
+              $i =$i+1;
+            }
+            if ( $this->escapeHtml($album->statut)==0){
+              $t =$t+1;
+            }
+            if ( $this->escapeHtml($album->statut)==1){
+              $p =$p+1;
+            }
+             if ( $this->escapeHtml($album->statut)==2){
+              $z =$z+1;
+            }
+                           
+         ?>
+  <?php endforeach; ?>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?php echo $i ?></h3>
+
+                <p>Etudiants enregistrés</p>
+              </div>
+              <div class="icon">
+                 <i class="ion ion-person-add"></i>
+              </div>
+              
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3><?php $k = $p+$z;echo ($k/$i)*100?><sup style="font-size: 20px">%</sup></h3>
+
+                <p>Etudiants programmés</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-calendar"></i>
+              </div>
+              
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                  <h3><?php echo $z ?></h3>
+
+                 <p>Etudiants soutenus</p>
+              </div>
+              <div class="icon">
+                 <i class="ion ion-stats-bars"></i>
+              </div>
+              
+            </div>
+          </div>
+          <!-- ./col -->
+          
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <!-- a mettre dans la partie de soutenances -->
+          <div class="col-lg-12 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                  <h5>Assurez-vous d'avoir au moins un jury constitué avant de procéder à la programmation d'une soutenance</h5>
+
+              </div>
+              <div class="icon">
+                <i class="ion ion-warning"></i>
+              </div>
+              
+            </div>
+          </div>
+        
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+
+
+
+
+<div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Rapport du nombre de soutenance par filière</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="chart-responsive">
+                      <canvas id="testPie" height="100"></canvas>
+                    </div>
+                    <!-- ./chart-responsive -->
+                  </div>
+                  
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.card-body 
+              <div class="card-footer bg-white p-0">
+                <ul class="nav nav-pills flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      United States of America
+                      <span class="float-right text-danger">
+                        <i class="fas fa-arrow-down text-sm"></i>
+                        12%</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      India
+                      <span class="float-right text-success">
+                        <i class="fas fa-arrow-up text-sm"></i> 4%
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      China
+                      <span class="float-right text-warning">
+                        <i class="fas fa-arrow-left text-sm"></i> 0%
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              /.footer -->
+            </div>
+            <!-- /.card -->
+
+
+
+
+
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- section fictive juste pour tester les anciens codes -->
+
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <?php
+    include "footer.php";
+  ?>
+

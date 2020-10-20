@@ -1,0 +1,115 @@
+
+<div class="wrapper">
+
+  <!-- Navbar -->
+ 
+  <!-- /.navbar -->
+  <?php
+  include "navbar.php";
+  include "sidebar.php";
+  ?>
+
+ 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <!-- <h1 class="m-0 text-dark">Dashboard</h1> -->
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <!-- <li class="breadcrumb-item"><a href="#">Accueil</a></li> -->
+              <!-- <li class="breadcrumb-item active">Dashboard v1</li> -->
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+  
+
+    <!-- section fictive juste pour tester les anciens codes -->
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+   
+
+          
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">La liste de toutes les soutenances</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="listeEtud" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                      <th>Code Soutenance</th>
+                      <th>Matricule de l'étudiant</th>
+                      <th>Thème</th>
+                      <th>Date</th>
+                      <th>Heure</th>
+                      
+                      <th>Code Jury</th>
+                      <th>Actions <i class="fa fa-cogs"></i></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <?php foreach ($soutenances as $soutenance) : ?>
+                      <tr>
+                          <td><?= $this->escapeHtml($soutenance->codeSoutenance) ?></td>
+                          <td><?= $this->escapeHtml($soutenance->matricule) ?></td>
+                          
+                          <td><?= $this->escapeHtml($soutenance->themeSoutenance) ?></td>
+                          <td><?= $this->escapeHtml($soutenance->dateSoutenance) ?></td>
+                          <td><?= $this->escapeHtml($soutenance->heureSoutenance) ?></td>
+                          <td><?= $this->escapeHtml($soutenance->codeJury) ?></td>
+                          <td>
+                              <a href="<?= $this->url('soutenance', ['action' => 'fiche', 'id' => $soutenance->id, 'matricule' => $soutenance->matricule, 'codeJury' => $soutenance->codeJury]) ?>" class="btn btn-success btn-sm"><i class="far fa-eye"></i>Détails</a>
+                              <a href="<?= $this->url('soutenance', ['action' => 'edit', 'id' => $soutenance->id]) ?>" class="btn btn-info btn-sm"><i class="far fa-edit"></i>Editer</a>
+                              <a href="<?= $this->url('soutenance', ['action' => 'delete', 'id' => $soutenance->id]) ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash-alt"></i>Supprimer</a>
+                          </td>
+                      </tr>
+                  <?php endforeach; ?>
+               
+                  </tbody>
+                  <tfoot>
+                 <tr>
+                      <th>Code Soutenance</th>
+                      <th>Matricule de l'étudiant</th>
+                      <th>Thème</th>
+                      <th>Date</th>
+                      <th>Heure</th>
+                      
+                      <th>Code Jury</th>
+                      <th>Actions <i class="fa fa-cogs"></i></th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <?php
+    include "footer.php";
+  ?>
+

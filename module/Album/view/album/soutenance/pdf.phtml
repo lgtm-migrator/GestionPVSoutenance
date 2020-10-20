@@ -1,0 +1,250 @@
+
+
+
+<?php
+
+require("fpdf/fpdf.php");
+
+
+// Création de la class PDF
+class PDF extends FPDF {
+	// Page header
+	function Header()
+	{ 
+		// Logo
+		//$this->Image( 'logo.jpg',82,15,40);
+		// Arial bold 15
+		$this->SetFont('Arial', 'B', 9);
+		//$test = $this->escapeHtml($jury->codeInvite);
+		$this -> Text(10, 6,"MINISTERE DE L'ENSEIGNEMENT");
+		$this -> Text(10, 10,"SUPERIEUR, DE LA RECHERCHE"); 
+		$this -> Text(10, 14,"SCIENTIFIQUE ET DE L'INNOVATION");
+		$this -> Text(22, 17,"----------------------");
+		$this -> Text(10, 22,"SECRETARIAT GENERAL");
+		$this -> Text(22, 26,"----------------------");
+        $this -> Text(10, 30,"UNIVERSITE JOSEPH KI-ZERBO");
+        $this -> Text(22, 34,"----------------------");
+        //$this->Image('logo1.jpg',22,34,20);
+		$this -> Text(10, 50,"Institut Burkinabe des Arts et des Metiers"); 
+        $this -> Text(10, 55,"03 BP 7021 Ouagadougou 03");
+        $this -> Text(10, 59,"Tel : (22) 25-35-67-31/62");
+        $this -> Text(22, 62,"----------------------");
+        $this -> Text(10, 65,"SERVICE DE SCOLARITE");
+        $this -> Text(146, 10,"BURKINA FASO");
+        $this -> Text(140, 14,"--------------------------------------");
+		$this -> Text(140, 18,"UNITE-PROGRES-JUSTICE");
+		$this -> Text(130, 53,"Annee universitaire 20..../20....");
+
+
+		$this->SetFont('Arial','B',12);
+		// Move to the right
+		$this->Cell(50);
+		// Title
+		$this->setFillColor(230,230,230);
+		$this ->SetX(100);
+		$this ->SetY(70);
+        $this->Cell(190,8,'PROCES VERBAL DE SOUTENANCE DE MEMOIRE',0,1,'C',1);
+        $this->Cell(190,8,'de master en Informatique',0,1,'C',1);
+		$this->Cell(190,8,'Option: Ingenierie des Systemes d\'Information en Entreprise',0,1,'C',1);
+        
+		$this->SetFont('Arial','',11);
+		$this->Text(15, 105, utf8_decode("NOM : ................................................................................................................................................................."));
+		$this->Text(15, 119, "NE(E) LE :...................................... \tA : ..............................................................................................................");
+		$this->Text(15, 112, utf8_decode("PRENOM (S):....................................................................................................................................................."));
+		$this->Text(15, 126, "FILIERE DE FORMATION : ............................................... \tMATRICULE :...........................................................");
+		$this->Text(15, 133, utf8_decode("DATE DE LA SOUTENANCE :..........................................................................................................................."));
+	
+		$this->SetFont('Arial','B',11);
+        $this->Text(15, 150, utf8_decode("THEME DU MEMOIRE :"));
+		$this->SetFont('Arial','',11);
+        $this->Text(15,153,"..............................................................................................................................................................................");
+        $this->Text(15,156,"..............................................................................................................................................................................");
+        $this->Text(15,159,"..............................................................................................................................................................................");
+        $this->SetFont('Arial','B',11);
+        $this->SetTextColor(0,0,0);
+        $this->Text(15,167,"ELEMENTS D'APPRECIATION DU MEMOIRE");
+
+		$this->Ln(); // Retour à la ligne
+		$this->SetFont('Arial','B',11);
+        $this->Text(15, 236, utf8_decode("OBSERVATIONS :"));
+		$this->SetFont('Arial','',11);
+        $this->Text(15,239,"..............................................................................................................................................................................");
+        $this->Text(15,242,"..............................................................................................................................................................................");
+        $this->Text(15,245,"..............................................................................................................................................................................");
+        
+		$this->Ln(); // Retour à la ligne
+		$this->SetFont('Arial','B',11);
+		$this->Text(10, 255, utf8_decode("Membre invité représentant l'entreprise"));
+		$this->Text(95, 255, utf8_decode("Directeur de mémoire"));
+		$this->Text(150, 255, utf8_decode("Membre invité du jury"));
+		$this->Text(90, 280, utf8_decode("LE PRESIDENT DU JURY"));
+		$this->SetFont('Arial','',8);
+		$this->Text(30, 260, utf8_decode("(Nom,Prenom,Signature)"));	
+		$this->Text(100, 260, utf8_decode("(Nom,Prenom,Signature)"));
+		$this->Text(155, 260, utf8_decode("(Nom,Prenom,Signature)"));
+		$this->Text(98, 285, utf8_decode("(Nom,Prenom,Signature)"));
+	
+		//$this->Ln(10);
+	}
+
+	function myCell($w,$h,$x,$t){
+		$this->SetY(171);
+		$height = $h/3;
+		$first = $height+2;
+		$second = $height + $height + $height +3;
+		$len = strlen($t);
+		if($len>25){
+			$txt = str_split($t,45);
+			$this->SetX($x);
+			$this->Cell($w,$first,$txt[0],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$second,$txt[1],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$h,'LTRB','0','L','0');
+
+		}else{
+			$this->SetX($x);
+			$this->Cell($w,$h,$t,'LTRB','0','L','0');
+		}
+	}
+	function myCell2($w,$h,$x,$t){
+		$this->SetY(181);
+		$height = $h/3;
+		$first = $height+2;
+		$second = $height + $height + $height +3;
+		$len = strlen($t);
+		if($len>25){
+			$txt = str_split($t,45);
+			$this->SetX($x);
+			$this->Cell($w,$first,$txt[0],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$second,$txt[1],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$h,'LTRB','0','L','0');
+
+		}else{
+			$this->SetX($x);
+			$this->Cell($w,$h,$t,'LTRB','0','L','0');
+		}
+	}
+	function myCell3($w,$h,$x,$t){
+		$this->SetY(191);
+		$height = $h/3;
+		$first = $height+2;
+		$second = $height + $height + $height +3;
+		$len = strlen($t);
+		if($len>25){
+			$txt = str_split($t,45);
+			$this->SetX($x);
+			$this->Cell($w,$first,$txt[0],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$second,$txt[1],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$h,'LTRB','0','L','0');
+		}else{
+			$this->SetX($x);
+			$this->Cell($w,$h,$t,'LTRB','0','L','0');
+		}
+	}
+	function myCell4($w,$h,$x,$t){
+		$this->SetY(201);
+		$height = $h/3;
+		$first = $height+2;
+		$second = $height + $height + $height +3;
+		$len = strlen($t);
+		if($len>25){
+			$txt = str_split($t,45);
+			$this->SetX($x);
+			$this->Cell($w,$first,$txt[0],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$second,$txt[1],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$h,'LTRB','0','L','0');
+
+		}else{
+			$this->SetX($x);
+			$this->Cell($w,$h,$t,'LTRB','0','L','0');
+		}
+	}
+	function myCell5($w,$h,$x,$t){
+		$this->SetY(211);
+		$height = $h/3;
+		$first = $height+2;
+		$second = $height + $height + $height +3;
+		$len = strlen($t);
+		if($len>25){
+			$txt = str_split($t,45);
+			$this->SetX($x);
+			$this->Cell($w,$first,$txt[0],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$second,$txt[1],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$h,'LTRB','0','L','0');
+		}else{
+			$this->SetX($x);
+			$this->Cell($w,$h,$t,'LTRB','0','L','0');
+		}
+	}
+	function myCell6($w,$h,$x,$t){
+		$this->SetY(221);
+		$height = $h/3;
+		$first = $height+2;
+		$second = $height + $height + $height +3;
+		$len = strlen($t);
+		if($len>25){
+			$txt = str_split($t,45);
+			$this->SetX($x);
+			$this->Cell($w,$first,$txt[0],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$second,$txt[1],'','','');
+			$this->SetX($x);
+			$this->Cell($w,$h,'LTRB','0','L','0');
+		}else{
+			$this->SetX($x);
+			$this->Cell($w,$h,$t,'LTRB','0','L','0');
+		}
+	}
+}
+// Instanciation 
+$pdf = new PDF();
+$pdf->AddPage();
+$pdf->SetFont('Times','',12);
+$w=50;
+$h=10;
+$x=$pdf->GetX();
+$pdf->myCell($w,$h,$x,'FORME');
+$x=$pdf->GetX();
+$pdf->myCell($w,$h,$x,'               /20');
+$pdf->Ln();
+$x=$pdf->GetX();
+$pdf->myCell3($w,$h,$x,'TOTAL');
+$x=$pdf->GetX();
+$pdf->myCell3($w,$h,$x,'               /60');
+$pdf->Ln();
+$x=$pdf->GetX();
+$pdf->myCell2($w,$h,$x,'FOND');
+$x=$pdf->GetX();
+$pdf->myCell2($w,$h,$x,'               /40');
+$pdf->Ln();
+$x=$pdf->GetX();
+$pdf->myCell4($w,$h,$x,'SOUTENACE');
+$x=$pdf->GetX();
+$pdf->myCell4($w,$h,$x,'               /20');
+$pdf->Ln();
+$x=$pdf->GetX();
+$pdf->myCell5($w,$h,$x,'NOTE DEFINITIVE');
+$x=$pdf->GetX();
+$pdf->myCell5($w,$h,$x,'               /80');
+$pdf->Ln();
+$x=$pdf->GetX();
+$pdf->myCell6($w,$h,$x,'NOTE DEFINITIVE sur 20');
+$x=$pdf->GetX();
+$pdf->myCell6($w,$h,$x,'              /20');
+$pdf->Ln();
+//$pdf->Header(20,270, $this->escapeHtml($jury->codeInvite));
+$pdf ->SetX(20);
+$pdf ->SetY(20);
+$pdf->Cell($w,$this->escapeHtml($jury->codeInvite));
+$pdf->Output();
+
+?>

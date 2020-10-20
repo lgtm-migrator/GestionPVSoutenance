@@ -1,0 +1,211 @@
+
+    <div class="wrapper">
+        <!-- Navbar -->
+       
+        <!-- /.navbar -->
+        <?php
+
+        include "navbar.php";
+        include "sidebar.php";
+  
+  ?>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            
+<?php
+// This provides a default CSS class and placeholder text for the title element:
+    
+    $date = $form->get('dateSoutenance');
+    $date->setAttribute('class', 'form-control datetimepicker-input');
+    $date->setAttribute('data-target', '#reservationdate');
+
+    $theme = $form->get('themeSoutenance');
+    $theme->setAttribute('class', 'form-control');                      
+    
+    $heure = $form->get('heureSoutenance');
+    $heure->setAttribute('class', 'form-control datetimepicker-input');
+    $heure->setAttribute('data-target', '#timepicker');
+    
+    $matricule = $form->get('matricule');
+    $matricule->setAttribute('class', 'form-control');
+
+    $codeJury = $form->get('codeJury');
+    $codeJury->setAttribute('class', 'form-control');
+
+    $codeSoutenance = $form->get('codeSoutenance');
+    $codeSoutenance->setAttribute('class', 'form-control');
+
+// This provides CSS classes for the submit button:
+$submit = $form->get('submit');
+$submit->setAttribute('class', 'btn btn-primary ');
+
+$form->setAttribute('action', $this->url('soutenance', ['action' => 'add']));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+?>
+
+
+
+
+
+
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Formulaire</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form role="form">
+                                    <div class="card-body">
+
+                                        
+                                        <div class="form-group">
+                                        <!-- auto select pour la matricule -->
+                                            <?= $this->formLabel($matricule) ?>
+                                            <select class="form-control select2" name="matricule" style="width: 100%;">
+                                               
+                                                <option>N0258746612</option>
+                                               <option> N020154520181</option>
+                                               <option> N04823520181</option>
+                                               <option> N02015445210</option>
+                                               <option> N03644158451</option>
+                                               <option> N0258746612</option>
+                                               <option> N0021541623</option>
+                                               <option> N1254862031</option>
+                                               <option> N07854520181</option>
+                                               <option> N569856322015</option>
+                                               <option> N548752365</option>
+                                               <option> N0214523654</option>
+                                               <option> N0154289632</option>
+                                               <option> N25415263201</option>
+                                               <option> N252563321012</option>
+                                               <option> N02154875002321</option>
+                                               <option> N021548993654</option>
+                                               <option> N02544187522</option>
+                                               <option> N1523520165320</option>
+                                                
+                                                
+                                                
+                                            </select>
+                                            <?= $this->formElementErrors()->render($matricule, ['class' => ' help-block']) ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <?= $this->formLabel($theme) ?>
+                                            <?= $this->formElement($theme)  ?>
+                                            <?= $this->formElementErrors()->render($theme, ['class' => 'help-block']) ?>
+                                        </div>
+                                        <div class="form-group">
+                                           <?= $this->formLabel($date) ?>
+                                            <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                                
+                                                <input type="text" class="form-control datetimepicker-input" name="dateSoutenance" data-target="#reservationdate"  data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                                                
+                                                <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                            </div>
+                                            <?= $this->formElementErrors()->render($date, ['class' => 'help-block']) ?>
+                                        </div>
+                                               
+                                                
+                                        <div class="form-group">                                                 
+                                            <div class="bootstrap-timepicker">
+                                                
+                                                    <?= $this->formLabel($heure) ?>
+                                                    
+                                                    <div class="input-group date" id="timepicker" data-target-input="nearest">
+                                                    
+                                                        <input type="text" class="form-control datetimepicker-input" name="heureSoutenance" data-target="#timepicker" >
+                                                
+                                                        <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
+                                                            <div class="input-group-text"><i class="far fa-clock"></i></div>
+                                                        </div>
+                                                    </div>
+                                                <?= $this->formElementErrors()->render($heure, ['class' => 'help-block']) ?>
+                                            </div>
+                                        </div>
+                                                 
+                                                  
+                                        <div class="form-group">
+                                        <!-- auto select pour le code du jury -->
+                                            <?= $this->formLabel($codeJury) ?>
+                                            <select class="form-control select2" name="codeJury" style="width: 100%;">
+                                                <option>1001</option>
+                                                <option>1002</option>
+                                                <option>1003</option>
+                                                <option>1004</option>
+                                                <option>1005</option>
+                                                
+                                                
+                                                
+                                            </select>
+                                            <?= $this->formElementErrors()->render($codeJury, ['class' => ' help-block']) ?>
+                                        </div>
+
+                                         
+                                       <div class="form-group">
+                                            <?= $this->formLabel($codeSoutenance) ?>
+                                            <?= $this->formElement($codeSoutenance)  ?>
+                                            <?= $this->formElementErrors()->render($codeSoutenance, ['class' => 'help-block']) ?>
+                                        </div>
+
+
+                                        <span>Cocher les semetres validés</span>
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="customCheckbox1"  required>
+                                            <label for="customCheckbox1" class="custom-control-label">Semestre 1</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="customCheckbox2"  required>
+                                            <label for="customCheckbox2" class="custom-control-label">Semestre 2</label>
+                                        </div>   
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="customCheckbox3"   required>
+                                            <label for="customCheckbox3" class="custom-control-label">Semestre 3</label>
+                                        </div> 
+
+                                        <div class="card-footer">
+                                        
+                                        
+                                            <?php
+                                            echo $this->formSubmit($submit);
+                                            echo $this->formHidden($form->get('id'));
+                                            echo $this->form()->closeTag();?>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- /.card-body -->
+
+                                    
+                                </form>
+                         
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!--/.col (right) -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <?php
+    include "footer.php";
+
+  ?>
+

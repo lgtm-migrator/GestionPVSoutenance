@@ -1,0 +1,192 @@
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            
+            <!-- Main content -->
+            <div class="invoice p-3 mb-3">
+              <div class="row">
+               <div class="col-sm-4">
+                    <strong>MINISTERE DE L'ENSEIGNEMENT</strong><br>
+                    <strong>SUPERIEUR, DE LA RECHERCHE </strong><br>
+                    <strong>SCIENTIFIQUE ET DE L'INNOVATION </strong><br>
+                    <strong>Lieu de naissance:  </strong><br>
+                    <strong>----------------------</strong><br>
+                    <strong>SECRETARIAT GENERAL</strong><br>
+                    <strong>----------------------</strong><br>
+                    <strong>UNIVERSITE JOSEPH KI-ZERBO</strong><br>
+                    <strong>----------------------</strong><br>
+                    <br>
+                    <br>
+                    <strong>Institut Burkinabe des Arts et des Metiers </strong><br>
+                    <strong>03 BP 7021 Ouagadougou 03</strong><br>
+                    <strong>Tel : (22) 25-35-67-31/62</strong><br>
+                    <strong>----------------------</strong><br>
+                    <strong>SERVICE DE SCOLARITE</strong><br>
+                    
+
+                </div>
+                <!-- /.col -->
+                <div class="col-4 "></div>
+                <div class="col-4">
+
+                    <strong>BURKINA FASO </strong><br>
+                    <strong>-------------------------------------- </strong><br>
+                    <strong>UNITE-PROGRES-JUSTICE </strong><br>
+                    <!-- <div class="text-center">
+                      <img src="../../dist/img/user1-128x128.jpg" alt="" class="img-fluid">
+                    </div> -->
+                    <br><br><br><br><br><br><br>
+                    <strong>Annee universitaire 20..../20.... </strong><br>
+                    
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            
+                 <div class="col-12">
+                 <div class="row">
+                    <div class="col-4">
+                    
+                    </div>
+                    <div class="col-4 pv">
+                   <center> <span>PROCES VERBAL DE SOUTENANCE DE MEMOIRE </span><br>
+                      <span>de master en Informatique </span><br>
+                      <span>Option: Ingenierie des Systemes d'Information en Entreprise</span></center><br>
+                        
+                    </div>
+
+                      <div class="col-4 ">
+                      
+                      </div>
+                      </div>
+                 </div>
+             
+
+              
+                <div class="col-12">
+                <div class="row">
+                
+                <div class="col-12">
+                  <strong>Nom: </strong><?= $this->escapeHtml($album->nomEtudiant) ?><br>
+                    <strong>Prenom: </strong><?= $this->escapeHtml($album->prenomEtudiant) ?><br>
+                    <strong>Né(e) le : </strong><?= $this->escapeHtml($album->dateNaissance) ?> 
+                    <strong>A  </strong><?= $this->escapeHtml($album->lieuNaissance) ?><br>
+                    <strong>Filière de formation: </strong><?= $this->escapeHtml($album->filiere) ?> 
+                    <strong>Matricule </strong><?= $this->escapeHtml($soutenance->matricule) ?><br>
+                    <strong>Date de soutenance: </strong><?= $this->escapeHtml($soutenance->dateSoutenance) ?>
+                    <strong>A  </strong> <?= $this->escapeHtml($soutenance->heureSoutenance) ?><br><br>
+                    <strong> <h4>THEME DU MEMOIRE:</h4></strong>    <i> <?= $this->escapeHtml($soutenance->themeSoutenance) ?></i><br><br>
+                    </div>
+                    
+                  
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+              
+              <!-- Table row -->
+              <div class="row">
+                <div class="col-6 table-responsive">
+                  <table class="table table-striped">
+                   <h4> ELEMENTS D'APPRECIATION DU MEMOIRE </h4>
+                    <tbody>
+                    <tr>
+                    <td>Forme</td> 
+                    <td>......./20</td> </tr>
+
+                     <tr>
+                    <td>Fond</td> 
+                    <td>......./40</td> </tr>
+
+                    <tr>
+                    <td>Total</td> 
+                    <td>......./60</td> </tr>
+
+                    <tr>
+                    <td>Soutenance</td> 
+                    <td>......./20</td> </tr>
+
+                    <tr>
+                    <td>Note définitive</td> 
+                    <td>......./80</td> </tr>
+
+                    <tr>
+                    <td>Note définitive sur 20</td> 
+                    <td>......./20</td> </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+              <div class="row">
+              <div class="col-12">
+              <h4>Observations</h4>
+              <span>......................................................................................................................................................................................................................................................................................................................
+               <br> ......................................................................................................................................................................................................................................................................................................................
+               <br> ......................................................................................................................................................................................................................................................................................................................</span>
+              </div>
+              </div>
+              </br>
+
+              <div class="col-12">
+                  <div class="row">
+                    <div class="col-4">
+                     <span>Membre invité représentant l'entreprise </span></br>
+                     <span>(Nom,Prenom,Signature)</span></br>
+                     <span><?= $this->escapeHtml($jury->codeInvite) ?>  </span></br>
+                   </div>
+
+                   <div class="col-4">
+                     <span>Directeur de mémoire  </span></br>
+                     <span>(Nom,Prenom,Signature)</span></br>
+                     <span><?= $this->escapeHtml($jury->codeDirecteur) ?>  </span></br>
+                   </div>
+
+                   <div class="col-4">
+                     <span>Maitre de stage </span></br>
+                     <span>(Nom,Prenom,Signature)</span></br>
+                     <span><?= $this->escapeHtml($jury->codeMaitre) ?></span></br>
+                   </div>
+                  
+                   </div>
+              </div></br>
+              <div class="col-12">
+                  <div class="row">
+                    <div class="col-4">
+                    
+                   </div>
+
+                   <div class="col-4">
+                     <span>Président du jury  </span></br>
+                     <span>(Nom,Prenom,Signature) </span></br>
+                     <span><?= $this->escapeHtml($jury->codePresident) ?> </span>
+                   </div>
+
+                   <div class="col-4">
+                     
+                   </div>
+                  
+                   </div>
+              </div>
+
+                
+                
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+              
+            </div>
+            <!-- /.invoice -->
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+
+<script type="text/javascript"> 
+  window.addEventListener("load", window.print());
+</script>
