@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "083753ff009320365eba966fcaf8509b",
+    "content-hash": "084328a2ce5b43ad133d024a56971666",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -3242,36 +3242,36 @@
         },
         {
             "name": "laminas/laminas-paginator",
-            "version": "2.8.3",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-paginator.git",
-                "reference": "ffc8ffc115375522334e039972169f1c226b4f7d"
+                "reference": "f1cf5c29d8dd7d6aa77f490e322326b3b670e28c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-paginator/zipball/ffc8ffc115375522334e039972169f1c226b4f7d",
-                "reference": "ffc8ffc115375522334e039972169f1c226b4f7d",
+                "url": "https://api.github.com/repos/laminas/laminas-paginator/zipball/f1cf5c29d8dd7d6aa77f490e322326b3b670e28c",
+                "reference": "f1cf5c29d8dd7d6aa77f490e322326b3b670e28c",
                 "shasum": ""
             },
             "require": {
-                "laminas/laminas-stdlib": "^2.7 || ^3.0",
-                "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^7.0 || ^5.6"
+                "laminas/laminas-stdlib": "^3.2.1",
+                "laminas/laminas-zendframework-bridge": "^1.0.4",
+                "php": "^7.3"
             },
             "replace": {
                 "zendframework/zend-paginator": "^2.8.2"
             },
             "require-dev": {
-                "laminas/laminas-cache": "^2.6.1",
+                "laminas/laminas-cache": "^2.9.0",
                 "laminas/laminas-coding-standard": "~1.0.0",
                 "laminas/laminas-config": "^2.6.0",
-                "laminas/laminas-db": "^2.9.2",
-                "laminas/laminas-filter": "^2.6.1",
+                "laminas/laminas-db": "^2.11.3",
+                "laminas/laminas-filter": "^2.9.4",
                 "laminas/laminas-json": "^2.6.1",
-                "laminas/laminas-servicemanager": "^2.7.5 || ^3.0.3",
-                "laminas/laminas-view": "^2.6.3",
-                "phpunit/phpunit": "^6.2.1 || ^5.7.15"
+                "laminas/laminas-servicemanager": "^3.4.1",
+                "laminas/laminas-view": "^2.11.4",
+                "phpunit/phpunit": "^8.5.8"
             },
             "suggest": {
                 "laminas/laminas-cache": "Laminas\\Cache component to support cache features",
@@ -3283,10 +3283,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8.x-dev",
-                    "dev-develop": "2.9.x-dev"
-                },
                 "laminas": {
                     "component": "Laminas\\Paginator",
                     "config-provider": "Laminas\\Paginator\\ConfigProvider"
@@ -3321,7 +3317,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-06-22T16:24:49+00:00"
+            "time": "2020-09-10T14:55:55+00:00"
         },
         {
             "name": "laminas/laminas-psr7bridge",
