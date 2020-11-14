@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3e0b6d3202e928b6fe75ce7d25dbec8",
+    "content-hash": "f68c9d62f5ff9325f4f3dd899c882891",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -1238,16 +1238,16 @@
         },
         {
             "name": "laminas/laminas-component-installer",
-            "version": "2.2.0",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-component-installer.git",
-                "reference": "5f99cfa211042ee6f19ab9cc2e7af4a1fe8f5b35"
+                "reference": "ea0c0d147f229ff78eeab52f4097e532ed7e2351"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-component-installer/zipball/5f99cfa211042ee6f19ab9cc2e7af4a1fe8f5b35",
-                "reference": "5f99cfa211042ee6f19ab9cc2e7af4a1fe8f5b35",
+                "url": "https://api.github.com/repos/laminas/laminas-component-installer/zipball/ea0c0d147f229ff78eeab52f4097e532ed7e2351",
+                "reference": "ea0c0d147f229ff78eeab52f4097e532ed7e2351",
                 "shasum": ""
             },
             "require": {
@@ -1267,10 +1267,6 @@
             },
             "type": "composer-plugin",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev",
-                    "dev-develop": "2.3.x-dev"
-                },
                 "class": "Laminas\\ComponentInstaller\\ComponentInstaller"
             },
             "autoload": {
@@ -1304,7 +1300,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-07-01T20:13:08+00:00"
+            "time": "2020-10-27T21:29:13+00:00"
         },
         {
             "name": "laminas/laminas-config",
