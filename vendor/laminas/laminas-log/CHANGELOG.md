@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 2.12.1 - TBD
+
+### Added
+
+- [#14](https://github.com/laminas/laminas-log/pull/14) Adds PHP 8.0 support
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- [#14](https://github.com/laminas/laminas-log/pull/14) Removes the `Null` Writer as it was replaced by the `Noop` Writer 6 years ago and won't work under PHP 7 as its a reserved word.
+
+### Fixed
+
+- Nothing.
+
 ## 2.12.0 - 2019-12-27
 
 ### Added

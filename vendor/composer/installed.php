@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ef599b418d1209c6ed62ae6287f62c012cafecda',
+    'reference' => 'e0d639b836421f47dbfbb4d9bb16134ab8c2e367',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -387,12 +387,12 @@
     ),
     'laminas/laminas-log' => 
     array (
-      'pretty_version' => '2.12.0',
-      'version' => '2.12.0.0',
+      'pretty_version' => '2.13.0',
+      'version' => '2.13.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4e92d841b48868714a070b10866e94be80fc92ff',
+      'reference' => '71bb2c98e0286c447488e71290ecf0beb44e6ca5',
     ),
     'laminas/laminas-modulemanager' => 
     array (
@@ -491,7 +491,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ef599b418d1209c6ed62ae6287f62c012cafecda',
+      'reference' => 'e0d639b836421f47dbfbb4d9bb16134ab8c2e367',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -1185,7 +1185,7 @@
     array (
       'replaced' => 
       array (
-        0 => '2.12.0',
+        0 => '^2.12.0',
       ),
     ),
     'zendframework/zend-modulemanager' => 
