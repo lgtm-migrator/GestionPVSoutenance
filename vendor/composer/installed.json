@@ -1804,17 +1804,17 @@
         },
         {
             "name": "laminas/laminas-di",
-            "version": "3.2.0",
-            "version_normalized": "3.2.0.0",
+            "version": "3.2.1",
+            "version_normalized": "3.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-di.git",
-                "reference": "9a9917cd3848c33ff638bc1a9462d0eafc759105"
+                "reference": "feee971d50ea327a0cac987f5de313a988203b9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-di/zipball/9a9917cd3848c33ff638bc1a9462d0eafc759105",
-                "reference": "9a9917cd3848c33ff638bc1a9462d0eafc759105",
+                "url": "https://api.github.com/repos/laminas/laminas-di/zipball/feee971d50ea327a0cac987f5de313a988203b9f",
+                "reference": "feee971d50ea327a0cac987f5de313a988203b9f",
                 "shasum": ""
             },
             "require": {
@@ -1837,13 +1837,13 @@
                 "laminas/laminas-servicemanager": "^3.4",
                 "mikey179/vfsstream": "^1.6.7",
                 "phpspec/prophecy-phpunit": "^2.0",
-                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan": "^0.12.64",
                 "phpunit/phpunit": "^9.3"
             },
             "suggest": {
                 "laminas/laminas-servicemanager": "An IoC container without auto wiring capabilities"
             },
-            "time": "2020-10-21T11:08:06+00:00",
+            "time": "2020-12-24T12:46:22+00:00",
             "type": "library",
             "extra": {
                 "laminas": {
@@ -2431,50 +2431,47 @@
         },
         {
             "name": "laminas/laminas-hydrator",
-            "version": "1.1.0",
-            "version_normalized": "1.1.0.0",
+            "version": "3.2.0",
+            "version_normalized": "3.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-hydrator.git",
-                "reference": "1ae0a72885be9d74a6af5086c052191e7cbcae83"
+                "reference": "f0336699910478cc45c7e34ca0fc83bf118e48bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-hydrator/zipball/1ae0a72885be9d74a6af5086c052191e7cbcae83",
-                "reference": "1ae0a72885be9d74a6af5086c052191e7cbcae83",
+                "url": "https://api.github.com/repos/laminas/laminas-hydrator/zipball/f0336699910478cc45c7e34ca0fc83bf118e48bc",
+                "reference": "f0336699910478cc45c7e34ca0fc83bf118e48bc",
                 "shasum": ""
             },
             "require": {
-                "laminas/laminas-stdlib": "^2.7 || ^3.0",
+                "laminas/laminas-stdlib": "^3.3",
                 "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^5.5 || ^7.0"
+                "php": "^7.3 || ~8.0.0"
             },
             "replace": {
-                "zendframework/zend-hydrator": "self.version"
+                "zendframework/zend-hydrator": "^3.0.2"
             },
             "require-dev": {
-                "laminas/laminas-eventmanager": "^2.6.2 || ^3.0",
-                "laminas/laminas-filter": "^2.6",
-                "laminas/laminas-inputfilter": "^2.6",
-                "laminas/laminas-serializer": "^2.6.1",
-                "laminas/laminas-servicemanager": "^2.7.5 || ^3.0.3",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "^2.0@dev"
+                "laminas/laminas-coding-standard": "~1.0.0",
+                "laminas/laminas-eventmanager": "^3.2.1",
+                "laminas/laminas-modulemanager": "^2.8",
+                "laminas/laminas-serializer": "^2.9",
+                "laminas/laminas-servicemanager": "^3.3.2",
+                "phpunit/phpunit": "~9.3.0",
+                "vimeo/psalm": "^3.16"
             },
             "suggest": {
-                "laminas/laminas-eventmanager": "^2.6.2 || ^3.0, to support aggregate hydrator usage",
-                "laminas/laminas-filter": "^2.6, to support naming strategy hydrator usage",
-                "laminas/laminas-serializer": "^2.6.1, to use the SerializableStrategy",
-                "laminas/laminas-servicemanager": "^2.7.5 || ^3.0.3, to support hydrator plugin manager usage"
+                "laminas/laminas-eventmanager": "^3.2, to support aggregate hydrator usage",
+                "laminas/laminas-serializer": "^2.9, to use the SerializableStrategy",
+                "laminas/laminas-servicemanager": "^3.3, to support hydrator plugin manager usage"
             },
-            "time": "2019-12-31T17:06:22+00:00",
+            "time": "2020-10-06T19:45:29+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-release-1.0": "1.0-dev",
-                    "dev-release-1.1": "1.1-dev",
-                    "dev-master": "2.0-dev",
-                    "dev-develop": "2.1-dev"
+                "laminas": {
+                    "component": "Laminas\\Hydrator",
+                    "config-provider": "Laminas\\Hydrator\\ConfigProvider"
                 }
             },
             "installation-source": "dist",
@@ -2487,6 +2484,7 @@
             "license": [
                 "BSD-3-Clause"
             ],
+            "description": "Serialize objects to arrays, and vice versa",
             "homepage": "https://laminas.dev",
             "keywords": [
                 "hydrator",
@@ -2500,6 +2498,12 @@
                 "rss": "https://github.com/laminas/laminas-hydrator/releases.atom",
                 "source": "https://github.com/laminas/laminas-hydrator"
             },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
             "install-path": "../laminas/laminas-hydrator"
         },
         {
@@ -3998,17 +4002,17 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "b9d84eaa39fde733356ea948cdef36c631f202b6"
+                "reference": "d81c7ffe602ed0e6ecb18691019111c0f4bf1efe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/b9d84eaa39fde733356ea948cdef36c631f202b6",
-                "reference": "b9d84eaa39fde733356ea948cdef36c631f202b6",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/d81c7ffe602ed0e6ecb18691019111c0f4bf1efe",
+                "reference": "d81c7ffe602ed0e6ecb18691019111c0f4bf1efe",
                 "shasum": ""
             },
             "require": {
@@ -4021,16 +4025,10 @@
             "require-dev": {
                 "laminas/laminas-coding-standard": "~1.0.0",
                 "phpbench/phpbench": "^0.17.1",
-                "phpunit/phpunit": "^9.3.7"
+                "phpunit/phpunit": "~9.3.7"
             },
-            "time": "2020-08-25T09:08:16+00:00",
+            "time": "2020-11-19T20:18:59+00:00",
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3.x-dev",
-                    "dev-develop": "3.4.x-dev"
-                }
-            },
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {

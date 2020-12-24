@@ -6,11 +6,16 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator\Filter;
+
+use function strpos;
+use function substr;
 
 class GetFilter implements FilterInterface
 {
-    public function filter($property)
+    public function filter(string $property) : bool
     {
         $pos = strpos($property, '::');
         if ($pos !== false) {
@@ -19,9 +24,6 @@ class GetFilter implements FilterInterface
             $pos = 0;
         }
 
-        if (substr($property, $pos, 3) === 'get') {
-            return true;
-        }
-        return false;
+        return substr($property, $pos, 3) === 'get';
     }
 }

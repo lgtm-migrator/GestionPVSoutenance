@@ -6,9 +6,11 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
-namespace Laminas\Hydrator;
+declare(strict_types=1);
 
-interface FilterEnabledInterface extends Filter\FilterProviderInterface
+namespace Laminas\Hydrator\Filter;
+
+interface FilterEnabledInterface extends FilterProviderInterface
 {
     /**
      * Add a new filter to take care of what needs to be hydrated.
@@ -29,30 +31,25 @@ interface FilterEnabledInterface extends Filter\FilterProviderInterface
      * </code>
      *
      * @param string $name Index in the composite
-     * @param callable|Filter\FilterInterface $filter
-     * @param int $condition
-     * @return Filter\FilterComposite
+     * @param callable|FilterInterface $filter
      */
-    public function addFilter($name, $filter, $condition = Filter\FilterComposite::CONDITION_OR);
+    public function addFilter(string $name, $filter, int $condition = FilterComposite::CONDITION_OR) : void;
 
     /**
      * Check whether a specific filter exists at key $name or not
      *
      * @param string $name Index in the composite
-     * @return bool
      */
-    public function hasFilter($name);
+    public function hasFilter(string $name) : bool;
 
     /**
      * Remove a filter from the composition.
+     *
      * To not extract "has" methods, you simply need to unregister it
      *
      * <code>
      * $filterComposite->removeFilter('has');
      * </code>
-     *
-     * @param $name
-     * @return Filter\FilterComposite
      */
-    public function removeFilter($name);
+    public function removeFilter(string $name) : void;
 }

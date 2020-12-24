@@ -1,5 +1,15 @@
 <?php
 
+
+
+
+
+
+
+
+
+
+
 namespace Composer;
 
 use Composer\Semver\VersionParser;
@@ -19,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e0d639b836421f47dbfbb4d9bb16134ab8c2e367',
+    'reference' => '2dedd73f2c2f09ea78960bae1a8b3a74290f90fe',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -283,12 +293,12 @@ private static $installed = array (
     ),
     'laminas/laminas-di' => 
     array (
-      'pretty_version' => '3.2.0',
-      'version' => '3.2.0.0',
+      'pretty_version' => '3.2.1',
+      'version' => '3.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '9a9917cd3848c33ff638bc1a9462d0eafc759105',
+      'reference' => 'feee971d50ea327a0cac987f5de313a988203b9f',
     ),
     'laminas/laminas-diactoros' => 
     array (
@@ -355,12 +365,12 @@ private static $installed = array (
     ),
     'laminas/laminas-hydrator' => 
     array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
+      'pretty_version' => '3.2.0',
+      'version' => '3.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1ae0a72885be9d74a6af5086c052191e7cbcae83',
+      'reference' => 'f0336699910478cc45c7e34ca0fc83bf118e48bc',
     ),
     'laminas/laminas-i18n' => 
     array (
@@ -504,7 +514,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'e0d639b836421f47dbfbb4d9bb16134ab8c2e367',
+      'reference' => '2dedd73f2c2f09ea78960bae1a8b3a74290f90fe',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -553,12 +563,12 @@ private static $installed = array (
     ),
     'laminas/laminas-stdlib' => 
     array (
-      'pretty_version' => '3.3.0',
-      'version' => '3.3.0.0',
+      'pretty_version' => '3.3.1',
+      'version' => '3.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b9d84eaa39fde733356ea948cdef36c631f202b6',
+      'reference' => 'd81c7ffe602ed0e6ecb18691019111c0f4bf1efe',
     ),
     'laminas/laminas-test' => 
     array (
@@ -1163,7 +1173,7 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '1.1.0',
+        0 => '^3.0.2',
       ),
     ),
     'zendframework/zend-i18n' => 

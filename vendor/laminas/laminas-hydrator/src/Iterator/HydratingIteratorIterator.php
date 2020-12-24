@@ -6,12 +6,18 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator\Iterator;
 
 use Iterator;
 use IteratorIterator;
 use Laminas\Hydrator\Exception\InvalidArgumentException;
 use Laminas\Hydrator\HydratorInterface;
+
+use function class_exists;
+use function is_object;
+use function sprintf;
 
 class HydratingIteratorIterator extends IteratorIterator implements HydratingIteratorInterface
 {
@@ -39,15 +45,18 @@ class HydratingIteratorIterator extends IteratorIterator implements HydratingIte
 
     /**
      * @inheritdoc
+     *
+     * @throws InvalidArgumentException if $prototype is a string, but refers to
+     *     a non-existent class.
      */
-    public function setPrototype($prototype)
+    public function setPrototype($prototype) : void
     {
         if (is_object($prototype)) {
             $this->prototype = $prototype;
             return;
         }
 
-        if (!class_exists($prototype)) {
+        if (! class_exists($prototype)) {
             throw new InvalidArgumentException(
                 sprintf('Method %s was passed an invalid class name: %s', __METHOD__, $prototype)
             );
@@ -59,7 +68,7 @@ class HydratingIteratorIterator extends IteratorIterator implements HydratingIte
     /**
      * @inheritdoc
      */
-    public function setHydrator(HydratorInterface $hydrator)
+    public function setHydrator(HydratorInterface $hydrator) : void
     {
         $this->hydrator = $hydrator;
     }

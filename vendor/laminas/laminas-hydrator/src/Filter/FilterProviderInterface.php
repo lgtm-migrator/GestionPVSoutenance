@@ -6,14 +6,14 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator\Filter;
 
 interface FilterProviderInterface
 {
     /**
      * Provides a filter for hydration
-     *
-     * @return FilterInterface
      */
-    public function getFilter();
+    public function getFilter() : FilterInterface;
 }
