@@ -2,28 +2,29 @@
     "packages": [
         {
             "name": "brick/varexporter",
-            "version": "0.3.2",
-            "version_normalized": "0.3.2.0",
+            "version": "0.3.3",
+            "version_normalized": "0.3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/varexporter.git",
-                "reference": "411110b797c6b1ecf947a0eec17ffaa59284f5a0"
+                "reference": "736378d357a189a692390bbc9e0eed835b079805"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/varexporter/zipball/411110b797c6b1ecf947a0eec17ffaa59284f5a0",
-                "reference": "411110b797c6b1ecf947a0eec17ffaa59284f5a0",
+                "url": "https://api.github.com/repos/brick/varexporter/zipball/736378d357a189a692390bbc9e0eed835b079805",
+                "reference": "736378d357a189a692390bbc9e0eed835b079805",
                 "shasum": ""
             },
             "require": {
                 "nikic/php-parser": "^4.0",
-                "php": ">=7.2"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "php-coveralls/php-coveralls": "^2.0",
-                "phpunit/phpunit": "^7.0"
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^8.5 || ^9.0",
+                "vimeo/psalm": "^4.3"
             },
-            "time": "2020-03-13T16:56:53+00:00",
+            "time": "2020-12-24T15:04:41+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -41,7 +42,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/varexporter/issues",
-                "source": "https://github.com/brick/varexporter/tree/master"
+                "source": "https://github.com/brick/varexporter/tree/0.3.3"
             },
             "install-path": "../brick/varexporter"
         },
@@ -1660,36 +1661,36 @@
         },
         {
             "name": "laminas/laminas-developer-tools",
-            "version": "2.0.2",
-            "version_normalized": "2.0.2.0",
+            "version": "2.1.0",
+            "version_normalized": "2.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-developer-tools.git",
-                "reference": "7c74cb0d71a8362e7491972a3e065402a216163f"
+                "reference": "e8c923c652748957fe959bcad52b4632806f8086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-developer-tools/zipball/7c74cb0d71a8362e7491972a3e065402a216163f",
-                "reference": "7c74cb0d71a8362e7491972a3e065402a216163f",
+                "url": "https://api.github.com/repos/laminas/laminas-developer-tools/zipball/e8c923c652748957fe959bcad52b4632806f8086",
+                "reference": "e8c923c652748957fe959bcad52b4632806f8086",
                 "shasum": ""
             },
             "require": {
-                "laminas/laminas-eventmanager": "^2.6.2 || ^3.0",
-                "laminas/laminas-modulemanager": "^2.7",
-                "laminas/laminas-mvc": "^2.7 || ^3.0.1",
-                "laminas/laminas-servicemanager": "^2.7.5 || ^3.0.3",
-                "laminas/laminas-stdlib": "^2.7 || ^3.0",
+                "laminas/laminas-eventmanager": "^3.3",
+                "laminas/laminas-modulemanager": "^2.10",
+                "laminas/laminas-mvc": "^3.1",
+                "laminas/laminas-servicemanager": "^3.0.3",
+                "laminas/laminas-stdlib": "^3.3",
                 "laminas/laminas-view": "^2.6",
-                "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^5.6 || ^7.0",
-                "symfony/var-dumper": "^3.4.36 || ^4.4.1 || ^5.0.1"
+                "laminas/laminas-zendframework-bridge": "^1.1",
+                "php": "^7.3 || ~8.0.0",
+                "symfony/var-dumper": "^5.0.1"
             },
             "replace": {
                 "zendframework/zend-developer-tools": "^2.0.0"
             },
             "require-dev": {
                 "laminas/laminas-coding-standard": "~1.0.0",
-                "phpunit/phpunit": "^5.7.25 || ^6.4.4 || ^7.1"
+                "phpunit/phpunit": "^9.3"
             },
             "suggest": {
                 "aist/aist-git-tools": "Show you information about current GIT repository",
@@ -1700,13 +1701,9 @@
                 "san/san-session-toolbar": "SanSessionToolbar can help you see current Laminas\\Session data you're using within your application.",
                 "snapshotpl/api-tools-snap-event-debugger": "ZfSnapEventDebugger can help you debug events from Laminas\\EventManager"
             },
-            "time": "2020-03-29T12:19:10+00:00",
+            "time": "2020-11-02T03:36:33+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev",
-                    "dev-develop": "2.1.x-dev"
-                },
                 "laminas": {
                     "module": "Laminas\\DeveloperTools"
                 }
@@ -1736,6 +1733,12 @@
                 "rss": "https://github.com/laminas/laminas-developer-tools/releases.atom",
                 "source": "https://github.com/laminas/laminas-developer-tools"
             },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
             "install-path": "../laminas/laminas-developer-tools"
         },
         {
@@ -3828,8 +3831,8 @@
         },
         {
             "name": "laminas/laminas-servicemanager",
-            "version": "3.4.1",
-            "version_normalized": "3.4.1.0",
+            "version": "3.5.1",
+            "version_normalized": "3.5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-servicemanager.git",
@@ -4368,17 +4371,17 @@
         },
         {
             "name": "laminas/laminas-view",
-            "version": "2.11.4",
-            "version_normalized": "2.11.4.0",
+            "version": "2.11.5",
+            "version_normalized": "2.11.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-view.git",
-                "reference": "3bbb2e94287383604c898284a18d2d06cf17301e"
+                "reference": "16611035d7b3a6ef2c636a9268c213146123b663"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-view/zipball/3bbb2e94287383604c898284a18d2d06cf17301e",
-                "reference": "3bbb2e94287383604c898284a18d2d06cf17301e",
+                "url": "https://api.github.com/repos/laminas/laminas-view/zipball/16611035d7b3a6ef2c636a9268c213146123b663",
+                "reference": "16611035d7b3a6ef2c636a9268c213146123b663",
                 "shasum": ""
             },
             "require": {
@@ -4390,7 +4393,7 @@
                 "php": "^5.6 || ^7.0"
             },
             "replace": {
-                "zendframework/zend-view": "self.version"
+                "zendframework/zend-view": "^2.11.4"
             },
             "require-dev": {
                 "laminas/laminas-authentication": "^2.5",
@@ -4414,7 +4417,7 @@
                 "laminas/laminas-servicemanager": "^2.7.5 || ^3.0.3",
                 "laminas/laminas-session": "^2.8.1",
                 "laminas/laminas-uri": "^2.5",
-                "phpunit/phpunit": "^5.7.15 || ^6.0.8"
+                "phpunit/phpunit": "^5.7.27 || ^6.5.14 || ^7.5.18"
             },
             "suggest": {
                 "laminas/laminas-authentication": "Laminas\\Authentication component",
@@ -4431,17 +4434,11 @@
                 "laminas/laminas-servicemanager": "Laminas\\ServiceManager component",
                 "laminas/laminas-uri": "Laminas\\Uri component"
             },
-            "time": "2019-12-31T18:03:30+00:00",
+            "time": "2020-12-15T14:57:08+00:00",
             "bin": [
                 "bin/templatemap_generator.php"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.11.x-dev",
-                    "dev-develop": "2.12.x-dev"
-                }
-            },
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
@@ -4466,6 +4463,12 @@
                 "rss": "https://github.com/laminas/laminas-view/releases.atom",
                 "source": "https://github.com/laminas/laminas-view"
             },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
             "install-path": "../laminas/laminas-view"
         },
         {
@@ -4594,17 +4597,17 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.10.2",
-            "version_normalized": "4.10.2.0",
+            "version": "v4.10.4",
+            "version_normalized": "4.10.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "658f1be311a230e0907f5dfe0213742aff0596de"
+                "reference": "c6d052fc58cb876152f89f532b95a8d7907e7f0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/658f1be311a230e0907f5dfe0213742aff0596de",
-                "reference": "658f1be311a230e0907f5dfe0213742aff0596de",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/c6d052fc58cb876152f89f532b95a8d7907e7f0e",
+                "reference": "c6d052fc58cb876152f89f532b95a8d7907e7f0e",
                 "shasum": ""
             },
             "require": {
@@ -4615,7 +4618,7 @@
                 "ircmaxell/php-yacc": "^0.0.7",
                 "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
             },
-            "time": "2020-09-26T10:30:38+00:00",
+            "time": "2020-12-20T10:01:03+00:00",
             "bin": [
                 "bin/php-parse"
             ],
@@ -4647,7 +4650,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.4"
             },
             "install-path": "../nikic/php-parser"
         },
@@ -7038,17 +7041,17 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.1.8",
-            "version_normalized": "5.1.8.0",
+            "version": "v5.2.1",
+            "version_normalized": "5.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "4e13f3fcefb1fcaaa5efb5403581406f4e840b9a"
+                "reference": "13e7e882eaa55863faa7c4ad7c60f12f1a8b5089"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/4e13f3fcefb1fcaaa5efb5403581406f4e840b9a",
-                "reference": "4e13f3fcefb1fcaaa5efb5403581406f4e840b9a",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/13e7e882eaa55863faa7c4ad7c60f12f1a8b5089",
+                "reference": "13e7e882eaa55863faa7c4ad7c60f12f1a8b5089",
                 "shasum": ""
             },
             "require": {
@@ -7071,7 +7074,7 @@
                 "ext-intl": "To show region name in time zone dump",
                 "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
             },
-            "time": "2020-10-27T10:11:13+00:00",
+            "time": "2020-12-16T17:02:19+00:00",
             "bin": [
                 "Resources/bin/var-dump-server"
             ],
@@ -7109,7 +7112,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v5.1.8"
+                "source": "https://github.com/symfony/var-dumper/tree/v5.2.1"
             },
             "funding": [
                 {

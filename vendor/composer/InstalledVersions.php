@@ -29,19 +29,19 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '2dedd73f2c2f09ea78960bae1a8b3a74290f90fe',
+    'reference' => '5510dba6a09687cf474a72b2d025a258e34e6675',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
   array (
     'brick/varexporter' => 
     array (
-      'pretty_version' => '0.3.2',
-      'version' => '0.3.2.0',
+      'pretty_version' => '0.3.3',
+      'version' => '0.3.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '411110b797c6b1ecf947a0eec17ffaa59284f5a0',
+      'reference' => '736378d357a189a692390bbc9e0eed835b079805',
     ),
     'container-interop/container-interop' => 
     array (
@@ -275,12 +275,12 @@ private static $installed = array (
     ),
     'laminas/laminas-developer-tools' => 
     array (
-      'pretty_version' => '2.0.2',
-      'version' => '2.0.2.0',
+      'pretty_version' => '2.1.0',
+      'version' => '2.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7c74cb0d71a8362e7491972a3e065402a216163f',
+      'reference' => 'e8c923c652748957fe959bcad52b4632806f8086',
     ),
     'laminas/laminas-development-mode' => 
     array (
@@ -514,7 +514,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '2dedd73f2c2f09ea78960bae1a8b3a74290f90fe',
+      'reference' => '5510dba6a09687cf474a72b2d025a258e34e6675',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -545,8 +545,8 @@ private static $installed = array (
     ),
     'laminas/laminas-servicemanager' => 
     array (
-      'pretty_version' => '3.4.1',
-      'version' => '3.4.1.0',
+      'pretty_version' => '3.5.1',
+      'version' => '3.5.1.0',
       'aliases' => 
       array (
       ),
@@ -608,12 +608,12 @@ private static $installed = array (
     ),
     'laminas/laminas-view' => 
     array (
-      'pretty_version' => '2.11.4',
-      'version' => '2.11.4.0',
+      'pretty_version' => '2.11.5',
+      'version' => '2.11.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3bbb2e94287383604c898284a18d2d06cf17301e',
+      'reference' => '16611035d7b3a6ef2c636a9268c213146123b663',
     ),
     'laminas/laminas-zendframework-bridge' => 
     array (
@@ -639,12 +639,12 @@ private static $installed = array (
     ),
     'nikic/php-parser' => 
     array (
-      'pretty_version' => 'v4.10.2',
-      'version' => '4.10.2.0',
+      'pretty_version' => 'v4.10.4',
+      'version' => '4.10.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '658f1be311a230e0907f5dfe0213742aff0596de',
+      'reference' => 'c6d052fc58cb876152f89f532b95a8d7907e7f0e',
     ),
     'phar-io/manifest' => 
     array (
@@ -1023,12 +1023,12 @@ private static $installed = array (
     ),
     'symfony/var-dumper' => 
     array (
-      'pretty_version' => 'v5.1.8',
-      'version' => '5.1.8.0',
+      'pretty_version' => 'v5.2.1',
+      'version' => '5.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4e13f3fcefb1fcaaa5efb5403581406f4e840b9a',
+      'reference' => '13e7e882eaa55863faa7c4ad7c60f12f1a8b5089',
     ),
     'theseer/tokenizer' => 
     array (
@@ -1355,7 +1355,7 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '2.11.4',
+        0 => '^2.11.4',
       ),
     ),
     'zfcampus/zf-development-mode' => 
