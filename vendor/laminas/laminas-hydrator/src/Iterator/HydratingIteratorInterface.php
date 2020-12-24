@@ -6,6 +6,8 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator\Iterator;
 
 use Iterator;
@@ -21,12 +23,10 @@ interface HydratingIteratorInterface extends Iterator
      *
      * @param string|object $prototype
      */
-    public function setPrototype($prototype);
+    public function setPrototype($prototype) : void;
 
     /**
      * Sets the hydrator to use during iteration.
-     *
-     * @param HydratorInterface $hydrator
      */
-    public function setHydrator(HydratorInterface $hydrator);
+    public function setHydrator(HydratorInterface $hydrator) : void;
 }

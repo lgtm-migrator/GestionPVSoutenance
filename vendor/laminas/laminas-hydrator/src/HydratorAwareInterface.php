@@ -6,22 +6,19 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator;
 
 interface HydratorAwareInterface
 {
     /**
      * Set hydrator
-     *
-     * @param  HydratorInterface $hydrator
-     * @return HydratorAwareInterface
      */
-    public function setHydrator(HydratorInterface $hydrator);
+    public function setHydrator(HydratorInterface $hydrator) : void;
 
     /**
      * Retrieve hydrator
-     *
-     * @return HydratorInterface
      */
-    public function getHydrator();
+    public function getHydrator() : ?HydratorInterface;
 }

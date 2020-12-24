@@ -6,41 +6,45 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator\Filter;
 
 use Laminas\Hydrator\Exception\InvalidArgumentException;
 use ReflectionException;
 use ReflectionMethod;
 
+use function sprintf;
+
 class NumberOfParameterFilter implements FilterInterface
 {
     /**
-     * The number of parameters beeing accepted
+     * The number of parameters being accepted
+     *
      * @var int
      */
-    protected $numberOfParameters = null;
+    protected $numberOfParameters;
 
     /**
      * @param int $numberOfParameters Number of accepted parameters
      */
-    public function __construct($numberOfParameters = 0)
+    public function __construct(int $numberOfParameters = 0)
     {
-        $this->numberOfParameters = (int) $numberOfParameters;
+        $this->numberOfParameters = $numberOfParameters;
     }
 
     /**
-     * @param string $property the name of the property
-     * @return bool
      * @throws InvalidArgumentException
      */
-    public function filter($property)
+    public function filter(string $property) : bool
     {
         try {
             $reflectionMethod = new ReflectionMethod($property);
         } catch (ReflectionException $exception) {
-            throw new InvalidArgumentException(
-                "Method $property doesn't exist"
-            );
+            throw new InvalidArgumentException(sprintf(
+                'Method %s does not exist',
+                $property
+            ));
         }
 
         return $reflectionMethod->getNumberOfParameters() === $this->numberOfParameters;

@@ -6,74 +6,56 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator\NamingStrategy;
 
-use Laminas\Filter\FilterChain;
+use Laminas\Hydrator\NamingStrategy\UnderscoreNamingStrategy\CamelCaseToUnderscoreFilter;
+use Laminas\Hydrator\NamingStrategy\UnderscoreNamingStrategy\UnderscoreToCamelCaseFilter;
 
 class UnderscoreNamingStrategy implements NamingStrategyInterface
 {
     /**
-     * @var FilterChain|null
+     * @var CamelCaseToUnderscoreFilter|null
      */
-    protected static $camelCaseToUnderscoreFilter;
+    private static $camelCaseToUnderscoreFilter;
 
     /**
-     * @var FilterChain|null
+     * @var UnderscoreToCamelCaseFilter|null
      */
-    protected static $underscoreToStudlyCaseFilter;
+    private static $underscoreToCamelCaseFilter;
 
     /**
      * Remove underscores and capitalize letters
-     *
-     * @param  string $name
-     * @return string
      */
-    public function hydrate($name)
+    public function hydrate(string $name, ?array $data = null) : string
     {
-        return $this->getUnderscoreToStudlyCaseFilter()->filter($name);
+        return $this->getUnderscoreToCamelCaseFilter()->filter($name);
     }
 
     /**
      * Remove capitalized letters and prepend underscores.
-     *
-     * @param  string $name
-     * @return string
      */
-    public function extract($name)
+    public function extract(string $name, ?object $object = null) : string
     {
         return $this->getCamelCaseToUnderscoreFilter()->filter($name);
     }
 
-    /**
-     * @return FilterChain
-     */
-    protected function getUnderscoreToStudlyCaseFilter()
+    private function getUnderscoreToCamelCaseFilter() : UnderscoreToCamelCaseFilter
     {
-        if (static::$underscoreToStudlyCaseFilter instanceof FilterChain) {
-            return static::$underscoreToStudlyCaseFilter;
+        if (! static::$underscoreToCamelCaseFilter) {
+            static::$underscoreToCamelCaseFilter = new UnderscoreToCamelCaseFilter();
         }
 
-        $filter = new FilterChain();
-
-        $filter->attachByName('WordUnderscoreToStudlyCase');
-
-        return static::$underscoreToStudlyCaseFilter = $filter;
+        return static::$underscoreToCamelCaseFilter;
     }
 
-    /**
-     * @return FilterChain
-     */
-    protected function getCamelCaseToUnderscoreFilter()
+    private function getCamelCaseToUnderscoreFilter() : CamelCaseToUnderscoreFilter
     {
-        if (static::$camelCaseToUnderscoreFilter instanceof FilterChain) {
-            return static::$camelCaseToUnderscoreFilter;
+        if (! static::$camelCaseToUnderscoreFilter) {
+            static::$camelCaseToUnderscoreFilter = new CamelCaseToUnderscoreFilter();
         }
 
-        $filter = new FilterChain();
-
-        $filter->attachByName('WordCamelCaseToUnderscore');
-        $filter->attachByName('StringToLower');
-
-        return static::$camelCaseToUnderscoreFilter = $filter;
+        return static::$camelCaseToUnderscoreFilter;
     }
 }

@@ -6,12 +6,17 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator\Filter;
 
 use Laminas\Hydrator\Exception\InvalidArgumentException;
 use ReflectionException;
 use ReflectionMethod;
 use ReflectionParameter;
+
+use function array_filter;
+use function sprintf;
 
 /**
  * Filter that includes methods which have no parameters or only optional parameters
@@ -29,8 +34,11 @@ class OptionalParametersFilter implements FilterInterface
 
     /**
      * {@inheritDoc}
+     *
+     * @throws InvalidArgumentException if reflection fails due to the method
+     *     not existing.
      */
-    public function filter($property)
+    public function filter(string $property) : bool
     {
         if (isset(static::$propertiesCache[$property])) {
             return static::$propertiesCache[$property];
@@ -39,7 +47,7 @@ class OptionalParametersFilter implements FilterInterface
         try {
             $reflectionMethod = new ReflectionMethod($property);
         } catch (ReflectionException $exception) {
-            throw new InvalidArgumentException(sprintf('Method %s doesn\'t exist', $property));
+            throw new InvalidArgumentException(sprintf('Method %s does not exist', $property));
         }
 
         $mandatoryParameters = array_filter(

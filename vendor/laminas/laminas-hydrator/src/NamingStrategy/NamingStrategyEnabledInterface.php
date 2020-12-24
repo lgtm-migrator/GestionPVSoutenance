@@ -6,36 +6,29 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
-namespace Laminas\Hydrator;
+declare(strict_types=1);
+
+namespace Laminas\Hydrator\NamingStrategy;
 
 interface NamingStrategyEnabledInterface
 {
     /**
      * Adds the given naming strategy
-     *
-     * @param NamingStrategy\NamingStrategyInterface $strategy The naming to register.
-     * @return self
      */
-    public function setNamingStrategy(NamingStrategy\NamingStrategyInterface $strategy);
+    public function setNamingStrategy(NamingStrategyInterface $strategy) : void;
 
     /**
      * Gets the naming strategy.
-     *
-     * @return NamingStrategy\NamingStrategyInterface
      */
-    public function getNamingStrategy();
+    public function getNamingStrategy() : NamingStrategyInterface;
 
     /**
      * Checks if a naming strategy exists.
-     *
-     * @return bool
      */
-    public function hasNamingStrategy();
+    public function hasNamingStrategy() : bool;
 
     /**
      * Removes the naming with the given name.
-     *
-     * @return self
      */
-    public function removeNamingStrategy();
+    public function removeNamingStrategy() : void;
 }

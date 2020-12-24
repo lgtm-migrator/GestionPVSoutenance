@@ -6,15 +6,14 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
-namespace Laminas\Hydrator;
+declare(strict_types=1);
 
-use Traversable;
+namespace Laminas\Hydrator;
 
 interface HydratorOptionsInterface
 {
     /**
-     * @param  array|Traversable $options
-     * @return self
+     * @param mixed[] $options
      */
-    public function setOptions($options);
+    public function setOptions(iterable $options) : void;
 }

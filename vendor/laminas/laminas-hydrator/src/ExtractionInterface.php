@@ -6,6 +6,8 @@
  * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
  */
 
+declare(strict_types=1);
+
 namespace Laminas\Hydrator;
 
 interface ExtractionInterface
@@ -13,8 +15,7 @@ interface ExtractionInterface
     /**
      * Extract values from an object
      *
-     * @param  object $object
-     * @return array
+     * @return mixed[]
      */
-    public function extract($object);
+    public function extract(object $object) : array;
 }
