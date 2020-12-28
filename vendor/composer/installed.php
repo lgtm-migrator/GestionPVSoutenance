@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5510dba6a09687cf474a72b2d025a258e34e6675',
+    'reference' => '04fc5852df2fec69d1c9a95b5fa1f2e07098e2b7',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -297,12 +297,12 @@
     ),
     'laminas/laminas-escaper' => 
     array (
-      'pretty_version' => '2.6.1',
-      'version' => '2.6.1.0',
+      'pretty_version' => '2.7.0',
+      'version' => '2.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '25f2a053eadfa92ddacb609dcbbc39362610da70',
+      'reference' => '5e04bc5ae5990b17159d79d331055e2c645e5cc5',
     ),
     'laminas/laminas-eventmanager' => 
     array (
@@ -414,12 +414,12 @@
     ),
     'laminas/laminas-mvc-console' => 
     array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0c16223557fdb9bba853f6de22e1040824c1c966',
+      'reference' => '90338c7b61a5fa8445c0a41925a4ae351459fa79',
     ),
     'laminas/laminas-mvc-form' => 
     array (
@@ -491,7 +491,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5510dba6a09687cf474a72b2d025a258e34e6675',
+      'reference' => '04fc5852df2fec69d1c9a95b5fa1f2e07098e2b7',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -513,12 +513,12 @@
     ),
     'laminas/laminas-router' => 
     array (
-      'pretty_version' => '3.3.2',
-      'version' => '3.3.2.0',
+      'pretty_version' => '3.4.4',
+      'version' => '3.4.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '01a6905202ad41a42ba63d60260eba32b89e18c7',
+      'reference' => '2a7068508af4de67d80ea292e0cc7c37563a33c6',
     ),
     'laminas/laminas-servicemanager' => 
     array (
@@ -1115,7 +1115,7 @@
     array (
       'replaced' => 
       array (
-        0 => '2.6.1',
+        0 => '^2.6.1',
       ),
     ),
     'zendframework/zend-eventmanager' => 
@@ -1206,7 +1206,7 @@
     array (
       'replaced' => 
       array (
-        0 => '1.2.0',
+        0 => '^1.2.0',
       ),
     ),
     'zendframework/zend-mvc-form' => 
