@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '04fc5852df2fec69d1c9a95b5fa1f2e07098e2b7',
+    'reference' => '5c827aafc05165d3a652e4774eeae47f09a2d6dd',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -302,12 +302,12 @@ private static $installed = array (
     ),
     'laminas/laminas-diactoros' => 
     array (
-      'pretty_version' => '2.4.1',
-      'version' => '2.4.1.0',
+      'pretty_version' => '2.5.0',
+      'version' => '2.5.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '36ef09b73e884135d2059cc498c938e90821bb57',
+      'reference' => '4ff7400c1c12e404144992ef43c8b733fd9ad516',
     ),
     'laminas/laminas-dom' => 
     array (
@@ -356,12 +356,12 @@ private static $installed = array (
     ),
     'laminas/laminas-http' => 
     array (
-      'pretty_version' => '2.13.0',
-      'version' => '2.13.0.0',
+      'pretty_version' => '2.14.2',
+      'version' => '2.14.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '33b7942f51ce905ce9bfc8bf28badc501d3904b5',
+      'reference' => '298f732e1acb031db70ea4fd2133a283b2a4a65e',
     ),
     'laminas/laminas-hydrator' => 
     array (
@@ -514,7 +514,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '04fc5852df2fec69d1c9a95b5fa1f2e07098e2b7',
+      'reference' => '5c827aafc05165d3a652e4774eeae47f09a2d6dd',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -527,12 +527,12 @@ private static $installed = array (
     ),
     'laminas/laminas-psr7bridge' => 
     array (
-      'pretty_version' => '1.2.2',
-      'version' => '1.2.2.0',
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd310ce73aae9ff4723f7561539e33c79c38602fe',
+      'reference' => '6a46cf5b403be26ee87905247b87959e091c0058',
     ),
     'laminas/laminas-router' => 
     array (
@@ -599,12 +599,12 @@ private static $installed = array (
     ),
     'laminas/laminas-validator' => 
     array (
-      'pretty_version' => '2.13.4',
-      'version' => '2.13.4.0',
+      'pretty_version' => '2.14.4',
+      'version' => '2.14.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '93593684e70b8ed1e870cacd34ca32b0c0ace185',
+      'reference' => 'e370c4695db1c81e6dfad38d8c4dbdb37b23d776',
     ),
     'laminas/laminas-view' => 
     array (
