@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '5c827aafc05165d3a652e4774eeae47f09a2d6dd',
+    'reference' => '916c335a2daa2a57ffd3ff8017b11c8412253860',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -369,12 +369,12 @@
     ),
     'laminas/laminas-json' => 
     array (
-      'pretty_version' => '3.1.2',
-      'version' => '3.1.2.0',
+      'pretty_version' => '3.2.0',
+      'version' => '3.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '00dc0da7b5e5018904c5c4a8e80a5faa16c2c1c6',
+      'reference' => '1e3b64d3b21dac0511e628ae8debc81002d14e3c',
     ),
     'laminas/laminas-loader' => 
     array (
@@ -491,7 +491,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '5c827aafc05165d3a652e4774eeae47f09a2d6dd',
+      'reference' => '916c335a2daa2a57ffd3ff8017b11c8412253860',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -1171,7 +1171,7 @@
     array (
       'replaced' => 
       array (
-        0 => '3.1.2',
+        0 => '^3.1.2',
       ),
     ),
     'zendframework/zend-loader' => 
