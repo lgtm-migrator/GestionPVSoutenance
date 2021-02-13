@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '916c335a2daa2a57ffd3ff8017b11c8412253860',
+    'reference' => '7bd07384f64dae00e7ad0768b2785b4a91e6bcd4',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -387,12 +387,12 @@
     ),
     'laminas/laminas-log' => 
     array (
-      'pretty_version' => '2.13.0',
-      'version' => '2.13.0.0',
+      'pretty_version' => '2.13.1',
+      'version' => '2.13.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '71bb2c98e0286c447488e71290ecf0beb44e6ca5',
+      'reference' => '6ac20830d4f324b4662fc454fcc1954436bfced3',
     ),
     'laminas/laminas-modulemanager' => 
     array (
@@ -491,7 +491,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '916c335a2daa2a57ffd3ff8017b11c8412253860',
+      'reference' => '7bd07384f64dae00e7ad0768b2785b4a91e6bcd4',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -522,12 +522,12 @@
     ),
     'laminas/laminas-servicemanager' => 
     array (
-      'pretty_version' => '3.5.1',
-      'version' => '3.5.1.0',
+      'pretty_version' => '3.6.4',
+      'version' => '3.6.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0d4c8628a71fae9f7bd0b1b74b76382e5e9a04b1',
+      'reference' => 'b1445e1a7077c21b0fad0974a1b7a11b9dbe0828',
     ),
     'laminas/laminas-session' => 
     array (
