@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '7bd07384f64dae00e7ad0768b2785b4a91e6bcd4',
+    'reference' => 'ddd99bae75663ef2726a8fe2339323474c4dc30e',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -243,12 +243,12 @@
     ),
     'laminas/laminas-db' => 
     array (
-      'pretty_version' => '2.11.3',
-      'version' => '2.11.3.0',
+      'pretty_version' => '2.11.4',
+      'version' => '2.11.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6c4238918b9204db1eb8cafae2c1940d40f4c007',
+      'reference' => '5b59413b8dd5d79e3fe58c2650c60b1730989f36',
     ),
     'laminas/laminas-developer-tools' => 
     array (
@@ -491,7 +491,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7bd07384f64dae00e7ad0768b2785b4a91e6bcd4',
+      'reference' => 'ddd99bae75663ef2726a8fe2339323474c4dc30e',
     ),
     'laminas/laminas-paginator' => 
     array (
