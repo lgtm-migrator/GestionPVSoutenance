@@ -2,28 +2,24 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.0.1 - 2020-10-12
-
-### Removed
-
-- Remove `laminas/laminas-cache` dependency to avoid circular dependencies.
+## 1.1.0 - 2020-12-31
 
 
 -----
 
-### Release Notes for [1.0.1](https://github.com/laminas/laminas-cache-storage-adapter-filesystem/milestone/2)
+### Release Notes for [1.1.0](https://github.com/laminas/laminas-cache-storage-adapter-filesystem/milestone/3)
 
-1.0.x bugfix release (patch)
+Feature release (minor)
 
-### 1.0.1
+### 1.1.0
 
 - Total issues resolved: **0**
 - Total pull requests resolved: **1**
 - Total contributors: **1**
 
-#### Bug
+#### Enhancement
 
- - [3: qa: remove cache dependency](https://github.com/laminas/laminas-cache-storage-adapter-filesystem/pull/3) thanks to @boesing
+ - [5: PHP 8.0 support](https://github.com/laminas/laminas-cache-storage-adapter-filesystem/pull/5) thanks to @odan
 
 ## 1.0.0 - 2020-10-05
 
