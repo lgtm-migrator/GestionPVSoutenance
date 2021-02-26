@@ -8,20 +8,23 @@
 
 namespace Laminas\Paginator\Adapter;
 
+use Closure;
 use Laminas\Db\Sql\Having;
 use Laminas\Db\Sql\Where;
 use Laminas\Db\TableGateway\AbstractTableGateway;
 
+/**
+ * @deprecated 2.10.0 Use the adapters in laminas/laminas-paginator-adapter-laminasdb.
+ */
 class DbTableGateway extends DbSelect
 {
     /**
      * Constructs instance.
      *
-     * @param AbstractTableGateway              $tableGateway
-     * @param null|Where|\Closure|string|array  $where
+     * @param null|Where|Closure|string|array $where
      * @param null|string|array                 $order
      * @param null|string|array                 $group
-     * @param null|Having|\Closure|string|array $having
+     * @param null|Having|Closure|string|array $having
      */
     public function __construct(
         AbstractTableGateway $tableGateway,

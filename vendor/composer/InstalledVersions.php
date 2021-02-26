@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '20e33c754378bf3a05045dff9c854b90fe581902',
+    'reference' => '41e4f83ddb70f98c3f7ed6d10fe1ad10320cf4c2',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -515,16 +515,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '20e33c754378bf3a05045dff9c854b90fe581902',
+      'reference' => '41e4f83ddb70f98c3f7ed6d10fe1ad10320cf4c2',
     ),
     'laminas/laminas-paginator' => 
     array (
-      'pretty_version' => '2.9.0',
-      'version' => '2.9.0.0',
+      'pretty_version' => '2.10.0',
+      'version' => '2.10.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f1cf5c29d8dd7d6aa77f490e322326b3b670e28c',
+      'reference' => '14ce4a397e6329954389cc40aa635caa9573f695',
     ),
     'laminas/laminas-psr7bridge' => 
     array (
@@ -618,12 +618,12 @@ private static $installed = array (
     ),
     'laminas/laminas-zendframework-bridge' => 
     array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6ede70583e101030bcace4dcddd648f760ddf642',
+      'reference' => '6cccbddfcfc742eb02158d6137ca5687d92cee32',
     ),
     'myclabs/deep-copy' => 
     array (
