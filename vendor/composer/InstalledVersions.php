@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '496a1f237f5f9dbae517ea7288e86d3718213c49',
+    'reference' => '20e33c754378bf3a05045dff9c854b90fe581902',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -80,12 +80,12 @@ private static $installed = array (
     ),
     'laminas/laminas-cache' => 
     array (
-      'pretty_version' => '2.10.0',
-      'version' => '2.10.0.0',
+      'pretty_version' => '2.10.1',
+      'version' => '2.10.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '060b2a71d42b12122a3546594727e7d4b870abd5',
+      'reference' => 'c0c24cb12f6180c4025eaabe092f63309876c2a9',
     ),
     'laminas/laminas-cache-storage-adapter-apc' => 
     array (
@@ -107,12 +107,12 @@ private static $installed = array (
     ),
     'laminas/laminas-cache-storage-adapter-blackhole' => 
     array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5f2cb437160fbc01d7f216b11e4f1ff4c9b95c49',
+      'reference' => '78aab2ceac8464e27aa330d2b5bba314b44accee',
     ),
     'laminas/laminas-cache-storage-adapter-dba' => 
     array (
@@ -134,12 +134,12 @@ private static $installed = array (
     ),
     'laminas/laminas-cache-storage-adapter-filesystem' => 
     array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ae1723bcd84efbdae8f20cbb1bacb9ce9c13dbde',
+      'reference' => 'e803d9942b30396491efbe649a3886450d22385f',
     ),
     'laminas/laminas-cache-storage-adapter-memcache' => 
     array (
@@ -515,7 +515,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '496a1f237f5f9dbae517ea7288e86d3718213c49',
+      'reference' => '20e33c754378bf3a05045dff9c854b90fe581902',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -1589,7 +1589,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];
