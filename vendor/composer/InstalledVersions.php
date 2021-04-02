@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '41e4f83ddb70f98c3f7ed6d10fe1ad10320cf4c2',
+    'reference' => '70a6a06049a3f85aa8667d654bb216dc7c5b967e',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -357,12 +357,12 @@ private static $installed = array (
     ),
     'laminas/laminas-http' => 
     array (
-      'pretty_version' => '2.14.2',
-      'version' => '2.14.2.0',
+      'pretty_version' => '2.14.3',
+      'version' => '2.14.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '298f732e1acb031db70ea4fd2133a283b2a4a65e',
+      'reference' => 'bfaab8093e382274efed7fdc3ceb15f09ba352bb',
     ),
     'laminas/laminas-hydrator' => 
     array (
@@ -402,12 +402,12 @@ private static $installed = array (
     ),
     'laminas/laminas-loader' => 
     array (
-      'pretty_version' => '2.6.1',
-      'version' => '2.6.1.0',
+      'pretty_version' => '2.7.0',
+      'version' => '2.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5d01c2c237ae9e68bec262f339947e2ea18979bc',
+      'reference' => 'bcf8a566cb9925a2e7cc41a16db09235ec9fb616',
     ),
     'laminas/laminas-log' => 
     array (
@@ -456,12 +456,12 @@ private static $installed = array (
     ),
     'laminas/laminas-mvc-i18n' => 
     array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4184f6572b5244a5f5781604f1e03d7955e304a0',
+      'reference' => '7ece491a02000a6c4ea2c4457fead3d12efc6eba',
     ),
     'laminas/laminas-mvc-plugin-fileprg' => 
     array (
@@ -515,7 +515,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '41e4f83ddb70f98c3f7ed6d10fe1ad10320cf4c2',
+      'reference' => '70a6a06049a3f85aa8667d654bb216dc7c5b967e',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -591,12 +591,12 @@ private static $installed = array (
     ),
     'laminas/laminas-uri' => 
     array (
-      'pretty_version' => '2.8.0',
-      'version' => '2.8.0.0',
+      'pretty_version' => '2.8.1',
+      'version' => '2.8.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8651611b6285529f25a4cb9a466c686d9b31468e',
+      'reference' => '79bd4c614c8cf9a6ba715a49fca8061e84933d87',
     ),
     'laminas/laminas-validator' => 
     array (
@@ -773,12 +773,12 @@ private static $installed = array (
     ),
     'psr/container' => 
     array (
-      'pretty_version' => '1.0.0',
-      'version' => '1.0.0.0',
+      'pretty_version' => '1.1.1',
+      'version' => '1.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b7ce3b176482dbbc1245ebf52b181af44c2cf55f',
+      'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
     ),
     'psr/container-implementation' => 
     array (
@@ -1202,7 +1202,7 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '2.6.1',
+        0 => '^2.6.1',
       ),
     ),
     'zendframework/zend-log' => 
@@ -1244,7 +1244,7 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '1.1.1',
+        0 => '^1.1.1',
       ),
     ),
     'zendframework/zend-mvc-plugin-fileprg' => 
