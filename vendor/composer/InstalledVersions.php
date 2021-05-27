@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '1840cae50b86030dd1dc4a797bd640e232251a30',
+    'reference' => '1b04e0649adaee5d6c00d15a67389a68b47a28a8',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -71,12 +71,12 @@ private static $installed = array (
     ),
     'laminas/laminas-authentication' => 
     array (
-      'pretty_version' => '2.7.0',
-      'version' => '2.7.0.0',
+      'pretty_version' => '2.8.0',
+      'version' => '2.8.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '53505e07858d243792b96be763456f786d953501',
+      'reference' => '0b77d353a3a039d65c15318c98dd055d62f010b6',
     ),
     'laminas/laminas-cache' => 
     array (
@@ -339,21 +339,21 @@ private static $installed = array (
     ),
     'laminas/laminas-filter' => 
     array (
-      'pretty_version' => '2.11.0',
-      'version' => '2.11.0.0',
+      'pretty_version' => '2.11.1',
+      'version' => '2.11.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'dd295a15f5c13d0c13d69ca0107190b1f2083d91',
+      'reference' => '671724e163aa75c210e94d12b77a0f3f8240d4b2',
     ),
     'laminas/laminas-form' => 
     array (
-      'pretty_version' => '2.16.3',
-      'version' => '2.16.3.0',
+      'pretty_version' => '2.17.0',
+      'version' => '2.17.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '76fe85b3f126183fe965d60e32e2bf6c7c108d61',
+      'reference' => '2a18e6724739f3f1875d30a6bb8ecedb3da5242e',
     ),
     'laminas/laminas-http' => 
     array (
@@ -465,48 +465,48 @@ private static $installed = array (
     ),
     'laminas/laminas-mvc-plugin-fileprg' => 
     array (
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2d6a64bf916b3f5f26a062b9c62d06af26ee483f',
+    ),
+    'laminas/laminas-mvc-plugin-flashmessenger' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f7569d05dfd774a2c84328792ee716e2d8b1e33e',
+    ),
+    'laminas/laminas-mvc-plugin-identity' => 
+    array (
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '75cf6df47aef315521eb390ab1478e586fda4ec8',
+    ),
+    'laminas/laminas-mvc-plugin-prg' => 
+    array (
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '943c03a869a1a421ce3c6dc2f034021b247d9b17',
+    ),
+    'laminas/laminas-mvc-plugins' => 
+    array (
       'pretty_version' => '1.1.0',
       'version' => '1.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4a1a3729b3789a4d9e7cfe285ce84a636be87a67',
-    ),
-    'laminas/laminas-mvc-plugin-flashmessenger' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f5a522c3aab215a9b89a0630beb91582f4a3f202',
-    ),
-    'laminas/laminas-mvc-plugin-identity' => 
-    array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0dc0c349be0faee67bbb4ae2a0206435a7a51516',
-    ),
-    'laminas/laminas-mvc-plugin-prg' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f9b094373795dd4250d3551a1fbd6d304762b621',
-    ),
-    'laminas/laminas-mvc-plugins' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '896104a57c3898c2ca932c1ec10c6a3afea2f815',
+      'reference' => 'd127f94f258f9d4ae1a3fa233bead2110cd538a9',
     ),
     'laminas/laminas-mvc-skeleton' => 
     array (
@@ -515,7 +515,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '1840cae50b86030dd1dc4a797bd640e232251a30',
+      'reference' => '1b04e0649adaee5d6c00d15a67389a68b47a28a8',
     ),
     'laminas/laminas-paginator' => 
     array (
@@ -1062,7 +1062,7 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '2.7.0',
+        0 => '^2.7.0',
       ),
     ),
     'zendframework/zend-cache' => 
@@ -1251,35 +1251,35 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '1.1.0',
+        0 => '^1.1.0',
       ),
     ),
     'zendframework/zend-mvc-plugin-flashmessenger' => 
     array (
       'replaced' => 
       array (
-        0 => '1.2.0',
+        0 => '^1.2.0',
       ),
     ),
     'zendframework/zend-mvc-plugin-identity' => 
     array (
       'replaced' => 
       array (
-        0 => '1.1.1',
+        0 => '^1.1.1',
       ),
     ),
     'zendframework/zend-mvc-plugin-prg' => 
     array (
       'replaced' => 
       array (
-        0 => '1.2.0',
+        0 => '^1.2.0',
       ),
     ),
     'zendframework/zend-mvc-plugins' => 
     array (
       'replaced' => 
       array (
-        0 => '1.0.1',
+        0 => '^1.0.1',
       ),
     ),
     'zendframework/zend-paginator' => 

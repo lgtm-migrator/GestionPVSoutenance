@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-form for the canonical source repository
- * @copyright https://github.com/laminas/laminas-form/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-form/blob/master/LICENSE.md New BSD License
- */
-
 namespace Laminas\Form\View\Helper;
 
 use Laminas\Escaper\Exception\RuntimeException as EscaperException;
@@ -57,6 +51,7 @@ abstract class AbstractHelper extends BaseAbstractHelper
         'autofocus'    => ['on' => 'autofocus', 'off' => ''],
         'checked'      => ['on' => 'checked',   'off' => ''],
         'disabled'     => ['on' => 'disabled',  'off' => ''],
+        'itemscope'    => ['on' => 'itemscope', 'off' => ''],
         'multiple'     => ['on' => 'multiple',  'off' => ''],
         'readonly'     => ['on' => 'readonly',  'off' => ''],
         'required'     => ['on' => 'required',  'off' => ''],
@@ -109,6 +104,9 @@ abstract class AbstractHelper extends BaseAbstractHelper
         'dropzone'           => true,
         'hidden'             => true,
         'id'                 => true,
+        'itemprop'           => true,
+        'itemscope'          => true,
+        'itemtype'           => true,
         'lang'               => true,
         'onabort'            => true,
         'onblur'             => true,
