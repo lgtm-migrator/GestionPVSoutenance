@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-form for the canonical source repository
- * @copyright https://github.com/laminas/laminas-form/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-form/blob/master/LICENSE.md New BSD License
- */
-
 namespace Laminas\Form;
 
 use Laminas\Stdlib\ArrayUtils;
@@ -62,6 +56,11 @@ class Element implements
      * @var mixed
      */
     protected $value;
+
+    /**
+     * @var boolean
+     */
+    protected $hasValue = false;
 
     /**
      * @param  null|int|string   $name    Optional name for the element
@@ -311,6 +310,8 @@ class Element implements
     public function setValue($value)
     {
         $this->value = $value;
+        $this->hasValue = true;
+
         return $this;
     }
 
@@ -513,5 +514,13 @@ class Element implements
     public function getMessages()
     {
         return $this->messages;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function hasValue()
+    {
+        return $this->hasValue;
     }
 }

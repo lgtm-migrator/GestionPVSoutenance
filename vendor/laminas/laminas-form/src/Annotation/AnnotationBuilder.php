@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-form for the canonical source repository
- * @copyright https://github.com/laminas/laminas-form/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-form/blob/master/LICENSE.md New BSD License
- */
-
 namespace Laminas\Form\Annotation;
 
 use ArrayObject;
@@ -43,11 +37,13 @@ use function var_export;
 class AnnotationBuilder implements EventManagerAwareInterface, FormFactoryAwareInterface
 {
     /**
+     * @deprecated 2.17.0 The annotation parser will be replaced by doctrine/annotations in 3.0
      * @var Parser\DoctrineAnnotationParser
      */
     protected $annotationParser;
 
     /**
+     * @deprecated 2.17.0 The annotation manager will be replaced by doctrine/annotations in 3.0
      * @var AnnotationManager
      */
     protected $annotationManager;
@@ -68,6 +64,7 @@ class AnnotationBuilder implements EventManagerAwareInterface, FormFactoryAwareI
     protected $entity;
 
     /**
+     * @deprecated 2.17.0 Version 3.0 will use doctrine/annotations which does not have a list of allowed annotations
      * @var array Default annotations to register
      */
     protected $defaultAnnotations = [
@@ -113,6 +110,7 @@ class AnnotationBuilder implements EventManagerAwareInterface, FormFactoryAwareI
      * Set annotation manager to use when building form from annotations
      *
      * @param  AnnotationManager $annotationManager
+     * @deprecated 2.17.0 The annotation manager will be replaced by doctrine/annotations in 3.0
      * @return $this
      */
     public function setAnnotationManager(AnnotationManager $annotationManager)
@@ -167,6 +165,7 @@ class AnnotationBuilder implements EventManagerAwareInterface, FormFactoryAwareI
      *
      * If none is currently set, creates one with default annotations.
      *
+     * @deprecated 2.17.0 The annotation manager will be replaced by doctrine/annotations in 3.0
      * @return AnnotationManager
      */
     public function getAnnotationManager()
@@ -447,6 +446,7 @@ class AnnotationBuilder implements EventManagerAwareInterface, FormFactoryAwareI
     }
 
     /**
+     * @deprecated 2.17.0 The annotation parser will be replaced by doctrine/annotations in 3.0
      * @return Parser\DoctrineAnnotationParser
      */
     public function getAnnotationParser()
