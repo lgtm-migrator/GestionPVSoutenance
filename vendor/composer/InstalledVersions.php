@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '1b04e0649adaee5d6c00d15a67389a68b47a28a8',
+    'reference' => '770f07b6a6a9bcd939e05bfd5a3107a539bdbd31',
     'name' => 'laminas/laminas-mvc-skeleton',
   ),
   'versions' => 
@@ -80,12 +80,12 @@ private static $installed = array (
     ),
     'laminas/laminas-cache' => 
     array (
-      'pretty_version' => '2.11.1',
-      'version' => '2.11.1.0',
+      'pretty_version' => '2.11.2',
+      'version' => '2.11.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f888588c3a40916e505658c9e8b8922166b70ec6',
+      'reference' => 'f825aecc67f40e8bc499500373e5de700b95d00b',
     ),
     'laminas/laminas-cache-storage-adapter-apc' => 
     array (
@@ -125,12 +125,12 @@ private static $installed = array (
     ),
     'laminas/laminas-cache-storage-adapter-ext-mongodb' => 
     array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '011ec5a8ca721ba012d232b1a01b50a55904b99f',
+      'reference' => '5810c3ffb442527b8b3429b0d29dce1ddabc92f2',
     ),
     'laminas/laminas-cache-storage-adapter-filesystem' => 
     array (
@@ -179,12 +179,12 @@ private static $installed = array (
     ),
     'laminas/laminas-cache-storage-adapter-redis' => 
     array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f871faafa8706f662ff10bc6ac63271b463af2ff',
+      'reference' => 'de8a63d4a0ef1ccead401eb7fb6d75b57fa3f9ee',
     ),
     'laminas/laminas-cache-storage-adapter-session' => 
     array (
@@ -515,7 +515,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '1b04e0649adaee5d6c00d15a67389a68b47a28a8',
+      'reference' => '770f07b6a6a9bcd939e05bfd5a3107a539bdbd31',
     ),
     'laminas/laminas-paginator' => 
     array (
