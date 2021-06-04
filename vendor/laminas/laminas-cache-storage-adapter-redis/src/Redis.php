@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-cache for the canonical source repository
- * @copyright https://github.com/laminas/laminas-cache/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-cache/blob/master/LICENSE.md New BSD License
- */
-
 namespace Laminas\Cache\Storage\Adapter;
 
 use Laminas\Cache\Exception;
@@ -502,6 +496,7 @@ class Redis extends AbstractAdapter implements
             $serializer        = $resourceMgr->getLibOption($options->getResourceId(), RedisResource::OPT_SERIALIZER);
             $redisVersion      = $resourceMgr->getMajorVersion($options->getResourceId());
             $minTtl            = version_compare($redisVersion, '2', '<') ? 0 : 1;
+            $maxKeyLength      = version_compare($redisVersion, '3', '<') ? 255 : 512000000;
             $supportedMetadata = $redisVersion >= 2 ? ['ttl'] : [];
 
             $this->capabilities = new Capabilities(
@@ -533,7 +528,7 @@ class Redis extends AbstractAdapter implements
                     'staticTtl'          => true,
                     'ttlPrecision'       => 1,
                     'useRequestTime'     => false,
-                    'maxKeyLength'       => 255,
+                    'maxKeyLength'       => $maxKeyLength,
                     'namespaceIsPrefix'  => true,
                 ]
             );
