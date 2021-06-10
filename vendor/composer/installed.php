@@ -1,1346 +1,1485 @@
-<?php return array (
-  'root' => 
-  array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
-    'aliases' => 
-    array (
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'type' => 'project',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => '37e42433bab34ac905073069f56ac1208749299a',
+        'name' => 'laminas/laminas-mvc-skeleton',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'amphp/amp' => array(
+            'pretty_version' => 'v2.5.2',
+            'version' => '2.5.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../amphp/amp',
+            'aliases' => array(),
+            'reference' => 'efca2b32a7580087adb8aabbff6be1dc1bb924a9',
+            'dev_requirement' => true,
+        ),
+        'amphp/byte-stream' => array(
+            'pretty_version' => 'v1.8.1',
+            'version' => '1.8.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../amphp/byte-stream',
+            'aliases' => array(),
+            'reference' => 'acbd8002b3536485c997c4e019206b3f10ca15bd',
+            'dev_requirement' => true,
+        ),
+        'brick/varexporter' => array(
+            'pretty_version' => '0.3.5',
+            'version' => '0.3.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../brick/varexporter',
+            'aliases' => array(),
+            'reference' => '05241f28dfcba2b51b11e2d750e296316ebbe518',
+            'dev_requirement' => false,
+        ),
+        'composer/package-versions-deprecated' => array(
+            'pretty_version' => '1.11.99.2',
+            'version' => '1.11.99.2',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/./package-versions-deprecated',
+            'aliases' => array(),
+            'reference' => 'c6522afe5540d5fc46675043d3ed5a45a740b27c',
+            'dev_requirement' => true,
+        ),
+        'composer/semver' => array(
+            'pretty_version' => '3.2.5',
+            'version' => '3.2.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/./semver',
+            'aliases' => array(),
+            'reference' => '31f3ea725711245195f62e54ffa402d8ef2fdba9',
+            'dev_requirement' => true,
+        ),
+        'composer/xdebug-handler' => array(
+            'pretty_version' => '2.0.1',
+            'version' => '2.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/./xdebug-handler',
+            'aliases' => array(),
+            'reference' => '964adcdd3a28bf9ed5d9ac6450064e0d71ed7496',
+            'dev_requirement' => true,
+        ),
+        'container-interop/container-interop' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../container-interop/container-interop',
+            'aliases' => array(),
+            'reference' => '79cbf1341c22ec75643d841642dd5d6acd83bdb8',
+            'dev_requirement' => false,
+        ),
+        'container-interop/container-interop-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '^1.2',
+            ),
+        ),
+        'dnoegel/php-xdg-base-dir' => array(
+            'pretty_version' => 'v0.1.1',
+            'version' => '0.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dnoegel/php-xdg-base-dir',
+            'aliases' => array(),
+            'reference' => '8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd',
+            'dev_requirement' => true,
+        ),
+        'doctrine/instantiator' => array(
+            'pretty_version' => '1.4.0',
+            'version' => '1.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../doctrine/instantiator',
+            'aliases' => array(),
+            'reference' => 'd56bf6102915de5702778fe20f2de3b2fe570b5b',
+            'dev_requirement' => true,
+        ),
+        'felixfbecker/advanced-json-rpc' => array(
+            'pretty_version' => 'v3.2.0',
+            'version' => '3.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../felixfbecker/advanced-json-rpc',
+            'aliases' => array(),
+            'reference' => '06f0b06043c7438959dbdeed8bb3f699a19be22e',
+            'dev_requirement' => true,
+        ),
+        'felixfbecker/language-server-protocol' => array(
+            'pretty_version' => '1.5.1',
+            'version' => '1.5.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../felixfbecker/language-server-protocol',
+            'aliases' => array(),
+            'reference' => '9d846d1f5cf101deee7a61c8ba7caa0a975cd730',
+            'dev_requirement' => true,
+        ),
+        'laminas/laminas-authentication' => array(
+            'pretty_version' => '2.8.0',
+            'version' => '2.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-authentication',
+            'aliases' => array(),
+            'reference' => '0b77d353a3a039d65c15318c98dd055d62f010b6',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache' => array(
+            'pretty_version' => '2.11.2',
+            'version' => '2.11.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache',
+            'aliases' => array(),
+            'reference' => 'f825aecc67f40e8bc499500373e5de700b95d00b',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-apc' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-apc',
+            'aliases' => array(),
+            'reference' => '8b375d994f6e67534f6ae6e995249e706faa30c1',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-apcu' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-apcu',
+            'aliases' => array(),
+            'reference' => 'e182aab739d6b03992a9915cc3c7019391a94548',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-blackhole' => array(
+            'pretty_version' => '1.2.1',
+            'version' => '1.2.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-blackhole',
+            'aliases' => array(),
+            'reference' => '4af1053efd81785a292c2a9442871c075700345a',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-dba' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-dba',
+            'aliases' => array(),
+            'reference' => 'ad968d3d8a0350af8e6717be58bb96e5a9e77f3b',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-ext-mongodb' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-ext-mongodb',
+            'aliases' => array(),
+            'reference' => '5810c3ffb442527b8b3429b0d29dce1ddabc92f2',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-filesystem' => array(
+            'pretty_version' => '1.1.1',
+            'version' => '1.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-filesystem',
+            'aliases' => array(),
+            'reference' => '76fc488c3fa0ad442e4e70f807305c940d1bdcbc',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-memcache' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-memcache',
+            'aliases' => array(),
+            'reference' => '1d2a74e300a0fd0b8d0e0cb4e379a173ccad0088',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-memcached' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-memcached',
+            'aliases' => array(),
+            'reference' => 'f5d35cc2ef6264c76021bcc798569182103baa91',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-memory' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-memory',
+            'aliases' => array(),
+            'reference' => '02c7a4a1118bbd47d1c0f0bfe1e8b140af79d2bd',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-mongodb' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-mongodb',
+            'aliases' => array(),
+            'reference' => 'ef4aa396b55533b8eb3e1d4126c39a78a22e49a6',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-redis' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-redis',
+            'aliases' => array(),
+            'reference' => 'de8a63d4a0ef1ccead401eb7fb6d75b57fa3f9ee',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-session' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-session',
+            'aliases' => array(),
+            'reference' => '74a275056cfca2300eb9a67cd1d917f7066b4113',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-wincache' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-wincache',
+            'aliases' => array(),
+            'reference' => '0f54599c5d9aff11b01adadd2742097f923170ba',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-xcache' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-xcache',
+            'aliases' => array(),
+            'reference' => '24049557aa796ec7527bcc8032ed68346232b219',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-adapter-zend-server' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-cache-storage-adapter-zend-server',
+            'aliases' => array(),
+            'reference' => '8d0b0d219a048a92472d89a5e527990f3ea2decc',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-cache-storage-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'laminas/laminas-code' => array(
+            'pretty_version' => '3.5.1',
+            'version' => '3.5.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-code',
+            'aliases' => array(),
+            'reference' => 'b549b70c0bb6e935d497f84f750c82653326ac77',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-component-installer' => array(
+            'pretty_version' => '2.5.0',
+            'version' => '2.5.0.0',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/../laminas/laminas-component-installer',
+            'aliases' => array(),
+            'reference' => '223d81cf648ff9380bd13cfe07a31324b0ffc8b8',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-config' => array(
+            'pretty_version' => '3.5.0',
+            'version' => '3.5.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-config',
+            'aliases' => array(),
+            'reference' => 'f91cd6fe79e82cbbcaa36485108a04e8ef1e679b',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-console' => array(
+            'pretty_version' => '2.8.0',
+            'version' => '2.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-console',
+            'aliases' => array(),
+            'reference' => '478a6ceac3e31fb38d6314088abda8b239ee23a5',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-db' => array(
+            'pretty_version' => '2.12.0',
+            'version' => '2.12.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-db',
+            'aliases' => array(),
+            'reference' => '80cbba4e749f9eb7d8036172acb9ad41e8b6923f',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-developer-tools' => array(
+            'pretty_version' => '2.1.1',
+            'version' => '2.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-developer-tools',
+            'aliases' => array(),
+            'reference' => '8d9e152e0791fe577e1d0fb63c6a973558f36013',
+            'dev_requirement' => true,
+        ),
+        'laminas/laminas-development-mode' => array(
+            'pretty_version' => '3.2.0',
+            'version' => '3.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-development-mode',
+            'aliases' => array(),
+            'reference' => '203cf2f61dbea1489cb6e0c42ffdc987ebe4f796',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-di' => array(
+            'pretty_version' => '3.2.2',
+            'version' => '3.2.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-di',
+            'aliases' => array(),
+            'reference' => 'ed38ab3b066c0a1f1b087e0a664caadf1d4f8f04',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-diactoros' => array(
+            'pretty_version' => '2.5.1',
+            'version' => '2.5.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-diactoros',
+            'aliases' => array(),
+            'reference' => '53df7b7cd66e0905e6133970a4b90392a7a08075',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-dom' => array(
+            'pretty_version' => '2.8.0',
+            'version' => '2.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-dom',
+            'aliases' => array(),
+            'reference' => '7e85e8d7d2980c716944b8bb8e4a83c0a0dbe91b',
+            'dev_requirement' => true,
+        ),
+        'laminas/laminas-escaper' => array(
+            'pretty_version' => '2.7.0',
+            'version' => '2.7.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-escaper',
+            'aliases' => array(),
+            'reference' => '5e04bc5ae5990b17159d79d331055e2c645e5cc5',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-eventmanager' => array(
+            'pretty_version' => '3.3.1',
+            'version' => '3.3.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-eventmanager',
+            'aliases' => array(),
+            'reference' => '966c859b67867b179fde1eff0cd38df51472ce4a',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-filter' => array(
+            'pretty_version' => '2.11.1',
+            'version' => '2.11.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-filter',
+            'aliases' => array(),
+            'reference' => '671724e163aa75c210e94d12b77a0f3f8240d4b2',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-form' => array(
+            'pretty_version' => '2.17.0',
+            'version' => '2.17.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-form',
+            'aliases' => array(),
+            'reference' => '2a18e6724739f3f1875d30a6bb8ecedb3da5242e',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-http' => array(
+            'pretty_version' => '2.14.3',
+            'version' => '2.14.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-http',
+            'aliases' => array(),
+            'reference' => 'bfaab8093e382274efed7fdc3ceb15f09ba352bb',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-hydrator' => array(
+            'pretty_version' => '4.1.0',
+            'version' => '4.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-hydrator',
+            'aliases' => array(),
+            'reference' => 'fc201f29280a8308579e7fb4c1fbc2fb3dfdbd8f',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-i18n' => array(
+            'pretty_version' => '2.11.1',
+            'version' => '2.11.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-i18n',
+            'aliases' => array(),
+            'reference' => '5e85a8facc5534e856cc7f5b4326533eede84b8a',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-inputfilter' => array(
+            'pretty_version' => '2.12.0',
+            'version' => '2.12.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-inputfilter',
+            'aliases' => array(),
+            'reference' => 'b6ab28b425e626b12488fec243e02d36d8dffeff',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-json' => array(
+            'pretty_version' => '3.2.0',
+            'version' => '3.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-json',
+            'aliases' => array(),
+            'reference' => '1e3b64d3b21dac0511e628ae8debc81002d14e3c',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-loader' => array(
+            'pretty_version' => '2.7.0',
+            'version' => '2.7.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-loader',
+            'aliases' => array(),
+            'reference' => 'bcf8a566cb9925a2e7cc41a16db09235ec9fb616',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-log' => array(
+            'pretty_version' => '2.13.1',
+            'version' => '2.13.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-log',
+            'aliases' => array(),
+            'reference' => '6ac20830d4f324b4662fc454fcc1954436bfced3',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-modulemanager' => array(
+            'pretty_version' => '2.10.2',
+            'version' => '2.10.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-modulemanager',
+            'aliases' => array(),
+            'reference' => '2068e0b300e87e139112016a6025be341ceaaf33',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc' => array(
+            'pretty_version' => '3.1.1',
+            'version' => '3.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-mvc',
+            'aliases' => array(),
+            'reference' => 'ead09f8ab5ff0e562dbd0198c7f67523c2f61980',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-console' => array(
+            'pretty_version' => '1.3.0',
+            'version' => '1.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-mvc-console',
+            'aliases' => array(),
+            'reference' => '90338c7b61a5fa8445c0a41925a4ae351459fa79',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-form' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'metapackage',
+            'install_path' => NULL,
+            'aliases' => array(),
+            'reference' => 'c027f5becb817736096d0967c5e42cd7f746d5e4',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-i18n' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-mvc-i18n',
+            'aliases' => array(),
+            'reference' => '7ece491a02000a6c4ea2c4457fead3d12efc6eba',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-plugin-fileprg' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-mvc-plugin-fileprg',
+            'aliases' => array(),
+            'reference' => '2d6a64bf916b3f5f26a062b9c62d06af26ee483f',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-plugin-flashmessenger' => array(
+            'pretty_version' => '1.3.0',
+            'version' => '1.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-mvc-plugin-flashmessenger',
+            'aliases' => array(),
+            'reference' => 'f7569d05dfd774a2c84328792ee716e2d8b1e33e',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-plugin-identity' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-mvc-plugin-identity',
+            'aliases' => array(),
+            'reference' => '75cf6df47aef315521eb390ab1478e586fda4ec8',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-plugin-prg' => array(
+            'pretty_version' => '1.3.0',
+            'version' => '1.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-mvc-plugin-prg',
+            'aliases' => array(),
+            'reference' => '943c03a869a1a421ce3c6dc2f034021b247d9b17',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-plugins' => array(
+            'pretty_version' => '1.1.0',
+            'version' => '1.1.0.0',
+            'type' => 'metapackage',
+            'install_path' => NULL,
+            'aliases' => array(),
+            'reference' => 'd127f94f258f9d4ae1a3fa233bead2110cd538a9',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-mvc-skeleton' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '37e42433bab34ac905073069f56ac1208749299a',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-paginator' => array(
+            'pretty_version' => '2.10.0',
+            'version' => '2.10.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-paginator',
+            'aliases' => array(),
+            'reference' => '14ce4a397e6329954389cc40aa635caa9573f695',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-psr7bridge' => array(
+            'pretty_version' => '1.3.1',
+            'version' => '1.3.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-psr7bridge',
+            'aliases' => array(),
+            'reference' => 'b1158f0574164039f698a261c01c26119cc6dbd6',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-router' => array(
+            'pretty_version' => '3.4.4',
+            'version' => '3.4.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-router',
+            'aliases' => array(),
+            'reference' => '2a7068508af4de67d80ea292e0cc7c37563a33c6',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-servicemanager' => array(
+            'pretty_version' => '3.6.4',
+            'version' => '3.6.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-servicemanager',
+            'aliases' => array(),
+            'reference' => 'b1445e1a7077c21b0fad0974a1b7a11b9dbe0828',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-session' => array(
+            'pretty_version' => '2.10.0',
+            'version' => '2.10.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-session',
+            'aliases' => array(),
+            'reference' => '921e6a9f807ee243a9a4f8a8a297929d0c2b50cd',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-stdlib' => array(
+            'pretty_version' => '3.3.1',
+            'version' => '3.3.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-stdlib',
+            'aliases' => array(),
+            'reference' => 'd81c7ffe602ed0e6ecb18691019111c0f4bf1efe',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-test' => array(
+            'pretty_version' => '3.5.0',
+            'version' => '3.5.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-test',
+            'aliases' => array(),
+            'reference' => 'a91af6342c1f0d8d917609fca1fe960cfaac4c2e',
+            'dev_requirement' => true,
+        ),
+        'laminas/laminas-text' => array(
+            'pretty_version' => '2.8.0',
+            'version' => '2.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-text',
+            'aliases' => array(),
+            'reference' => '76fccc8f79a6fb61689e96ab300566c0065deaaa',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-uri' => array(
+            'pretty_version' => '2.8.1',
+            'version' => '2.8.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-uri',
+            'aliases' => array(),
+            'reference' => '79bd4c614c8cf9a6ba715a49fca8061e84933d87',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-validator' => array(
+            'pretty_version' => '2.14.4',
+            'version' => '2.14.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-validator',
+            'aliases' => array(),
+            'reference' => 'e370c4695db1c81e6dfad38d8c4dbdb37b23d776',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-view' => array(
+            'pretty_version' => '2.12.0',
+            'version' => '2.12.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-view',
+            'aliases' => array(),
+            'reference' => '3ef103da6887809f08ecf52f42c31a76c9bf08b1',
+            'dev_requirement' => false,
+        ),
+        'laminas/laminas-zendframework-bridge' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-zendframework-bridge',
+            'aliases' => array(),
+            'reference' => '6cccbddfcfc742eb02158d6137ca5687d92cee32',
+            'dev_requirement' => false,
+        ),
+        'myclabs/deep-copy' => array(
+            'pretty_version' => '1.10.2',
+            'version' => '1.10.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../myclabs/deep-copy',
+            'aliases' => array(),
+            'reference' => '776f831124e9c62e1a2c601ecc52e776d8bb7220',
+            'dev_requirement' => true,
+            'replaced' => array(
+                0 => '1.10.2',
+            ),
+        ),
+        'netresearch/jsonmapper' => array(
+            'pretty_version' => 'v2.1.0',
+            'version' => '2.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../netresearch/jsonmapper',
+            'aliases' => array(),
+            'reference' => 'e0f1e33a71587aca81be5cffbb9746510e1fe04e',
+            'dev_requirement' => true,
+        ),
+        'nikic/php-parser' => array(
+            'pretty_version' => 'v4.10.5',
+            'version' => '4.10.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/php-parser',
+            'aliases' => array(),
+            'reference' => '4432ba399e47c66624bc73c8c0f811e5c109576f',
+            'dev_requirement' => false,
+        ),
+        'ocramius/package-versions' => array(
+            'dev_requirement' => true,
+            'replaced' => array(
+                0 => '1.11.99',
+            ),
+        ),
+        'openlss/lib-array2xml' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../openlss/lib-array2xml',
+            'aliases' => array(),
+            'reference' => 'a91f18a8dfc69ffabe5f9b068bc39bb202c81d90',
+            'dev_requirement' => true,
+        ),
+        'phar-io/manifest' => array(
+            'pretty_version' => '2.0.1',
+            'version' => '2.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phar-io/manifest',
+            'aliases' => array(),
+            'reference' => '85265efd3af7ba3ca4b2a2c34dbfc5788dd29133',
+            'dev_requirement' => true,
+        ),
+        'phar-io/version' => array(
+            'pretty_version' => '3.1.0',
+            'version' => '3.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phar-io/version',
+            'aliases' => array(),
+            'reference' => 'bae7c545bef187884426f042434e561ab1ddb182',
+            'dev_requirement' => true,
+        ),
+        'phpdocumentor/reflection-common' => array(
+            'pretty_version' => '2.2.0',
+            'version' => '2.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpdocumentor/reflection-common',
+            'aliases' => array(),
+            'reference' => '1d01c49d4ed62f25aa84a747ad35d5a16924662b',
+            'dev_requirement' => true,
+        ),
+        'phpdocumentor/reflection-docblock' => array(
+            'pretty_version' => '5.2.2',
+            'version' => '5.2.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpdocumentor/reflection-docblock',
+            'aliases' => array(),
+            'reference' => '069a785b2141f5bcf49f3e353548dc1cce6df556',
+            'dev_requirement' => true,
+        ),
+        'phpdocumentor/type-resolver' => array(
+            'pretty_version' => '1.4.0',
+            'version' => '1.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpdocumentor/type-resolver',
+            'aliases' => array(),
+            'reference' => '6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0',
+            'dev_requirement' => true,
+        ),
+        'phpspec/prophecy' => array(
+            'pretty_version' => '1.13.0',
+            'version' => '1.13.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpspec/prophecy',
+            'aliases' => array(),
+            'reference' => 'be1996ed8adc35c3fd795488a653f4b518be70ea',
+            'dev_requirement' => true,
+        ),
+        'phpunit/php-code-coverage' => array(
+            'pretty_version' => '9.2.6',
+            'version' => '9.2.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpunit/php-code-coverage',
+            'aliases' => array(),
+            'reference' => 'f6293e1b30a2354e8428e004689671b83871edde',
+            'dev_requirement' => true,
+        ),
+        'phpunit/php-file-iterator' => array(
+            'pretty_version' => '3.0.5',
+            'version' => '3.0.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpunit/php-file-iterator',
+            'aliases' => array(),
+            'reference' => 'aa4be8575f26070b100fccb67faabb28f21f66f8',
+            'dev_requirement' => true,
+        ),
+        'phpunit/php-invoker' => array(
+            'pretty_version' => '3.1.1',
+            'version' => '3.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpunit/php-invoker',
+            'aliases' => array(),
+            'reference' => '5a10147d0aaf65b58940a0b72f71c9ac0423cc67',
+            'dev_requirement' => true,
+        ),
+        'phpunit/php-text-template' => array(
+            'pretty_version' => '2.0.4',
+            'version' => '2.0.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpunit/php-text-template',
+            'aliases' => array(),
+            'reference' => '5da5f67fc95621df9ff4c4e5a84d6a8a2acf7c28',
+            'dev_requirement' => true,
+        ),
+        'phpunit/php-timer' => array(
+            'pretty_version' => '5.0.3',
+            'version' => '5.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpunit/php-timer',
+            'aliases' => array(),
+            'reference' => '5a63ce20ed1b5bf577850e2c4e87f4aa902afbd2',
+            'dev_requirement' => true,
+        ),
+        'phpunit/phpunit' => array(
+            'pretty_version' => '9.5.5',
+            'version' => '9.5.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpunit/phpunit',
+            'aliases' => array(),
+            'reference' => '89ff45ea9d70e35522fb6654a2ebc221158de276',
+            'dev_requirement' => true,
+        ),
+        'psalm/plugin-phpunit' => array(
+            'pretty_version' => '0.15.2',
+            'version' => '0.15.2.0',
+            'type' => 'psalm-plugin',
+            'install_path' => __DIR__ . '/../psalm/plugin-phpunit',
+            'aliases' => array(),
+            'reference' => '31d15bbc0169a3c454e495e03fd8a6ccb663661b',
+            'dev_requirement' => true,
+        ),
+        'psalm/psalm' => array(
+            'dev_requirement' => true,
+            'provided' => array(
+                0 => '4.7.3',
+            ),
+        ),
+        'psr/cache' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/cache',
+            'aliases' => array(),
+            'reference' => 'd11b50ad223250cf17b86e38383413f5a6764bf8',
+            'dev_requirement' => false,
+        ),
+        'psr/cache-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/container' => array(
+            'pretty_version' => '1.1.1',
+            'version' => '1.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/container',
+            'aliases' => array(),
+            'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
+            'dev_requirement' => false,
+        ),
+        'psr/container-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '^1.0',
+            ),
+        ),
+        'psr/http-factory' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-factory',
+            'aliases' => array(),
+            'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
+            'dev_requirement' => false,
+        ),
+        'psr/http-factory-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/http-message' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-message',
+            'aliases' => array(),
+            'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
+            'dev_requirement' => false,
+        ),
+        'psr/http-message-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/log' => array(
+            'pretty_version' => '1.1.4',
+            'version' => '1.1.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/log',
+            'aliases' => array(),
+            'reference' => 'd49695b909c3b7628b6289db5479a1c204601f11',
+            'dev_requirement' => false,
+        ),
+        'psr/log-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0.0',
+                1 => '1.0',
+            ),
+        ),
+        'psr/simple-cache' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/simple-cache',
+            'aliases' => array(),
+            'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
+            'dev_requirement' => false,
+        ),
+        'psr/simple-cache-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'sebastian/cli-parser' => array(
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/cli-parser',
+            'aliases' => array(),
+            'reference' => '442e7c7e687e42adc03470c7b668bc4b2402c0b2',
+            'dev_requirement' => true,
+        ),
+        'sebastian/code-unit' => array(
+            'pretty_version' => '1.0.8',
+            'version' => '1.0.8.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/code-unit',
+            'aliases' => array(),
+            'reference' => '1fc9f64c0927627ef78ba436c9b17d967e68e120',
+            'dev_requirement' => true,
+        ),
+        'sebastian/code-unit-reverse-lookup' => array(
+            'pretty_version' => '2.0.3',
+            'version' => '2.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/code-unit-reverse-lookup',
+            'aliases' => array(),
+            'reference' => 'ac91f01ccec49fb77bdc6fd1e548bc70f7faa3e5',
+            'dev_requirement' => true,
+        ),
+        'sebastian/comparator' => array(
+            'pretty_version' => '4.0.6',
+            'version' => '4.0.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/comparator',
+            'aliases' => array(),
+            'reference' => '55f4261989e546dc112258c7a75935a81a7ce382',
+            'dev_requirement' => true,
+        ),
+        'sebastian/complexity' => array(
+            'pretty_version' => '2.0.2',
+            'version' => '2.0.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/complexity',
+            'aliases' => array(),
+            'reference' => '739b35e53379900cc9ac327b2147867b8b6efd88',
+            'dev_requirement' => true,
+        ),
+        'sebastian/diff' => array(
+            'pretty_version' => '4.0.4',
+            'version' => '4.0.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/diff',
+            'aliases' => array(),
+            'reference' => '3461e3fccc7cfdfc2720be910d3bd73c69be590d',
+            'dev_requirement' => true,
+        ),
+        'sebastian/environment' => array(
+            'pretty_version' => '5.1.3',
+            'version' => '5.1.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/environment',
+            'aliases' => array(),
+            'reference' => '388b6ced16caa751030f6a69e588299fa09200ac',
+            'dev_requirement' => true,
+        ),
+        'sebastian/exporter' => array(
+            'pretty_version' => '4.0.3',
+            'version' => '4.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/exporter',
+            'aliases' => array(),
+            'reference' => 'd89cc98761b8cb5a1a235a6b703ae50d34080e65',
+            'dev_requirement' => true,
+        ),
+        'sebastian/global-state' => array(
+            'pretty_version' => '5.0.2',
+            'version' => '5.0.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/global-state',
+            'aliases' => array(),
+            'reference' => 'a90ccbddffa067b51f574dea6eb25d5680839455',
+            'dev_requirement' => true,
+        ),
+        'sebastian/lines-of-code' => array(
+            'pretty_version' => '1.0.3',
+            'version' => '1.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/lines-of-code',
+            'aliases' => array(),
+            'reference' => 'c1c2e997aa3146983ed888ad08b15470a2e22ecc',
+            'dev_requirement' => true,
+        ),
+        'sebastian/object-enumerator' => array(
+            'pretty_version' => '4.0.4',
+            'version' => '4.0.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/object-enumerator',
+            'aliases' => array(),
+            'reference' => '5c9eeac41b290a3712d88851518825ad78f45c71',
+            'dev_requirement' => true,
+        ),
+        'sebastian/object-reflector' => array(
+            'pretty_version' => '2.0.4',
+            'version' => '2.0.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/object-reflector',
+            'aliases' => array(),
+            'reference' => 'b4f479ebdbf63ac605d183ece17d8d7fe49c15c7',
+            'dev_requirement' => true,
+        ),
+        'sebastian/recursion-context' => array(
+            'pretty_version' => '4.0.4',
+            'version' => '4.0.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/recursion-context',
+            'aliases' => array(),
+            'reference' => 'cd9d8cf3c5804de4341c283ed787f099f5506172',
+            'dev_requirement' => true,
+        ),
+        'sebastian/resource-operations' => array(
+            'pretty_version' => '3.0.3',
+            'version' => '3.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/resource-operations',
+            'aliases' => array(),
+            'reference' => '0f4443cb3a1d92ce809899753bc0d5d5a8dd19a8',
+            'dev_requirement' => true,
+        ),
+        'sebastian/type' => array(
+            'pretty_version' => '2.3.2',
+            'version' => '2.3.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/type',
+            'aliases' => array(),
+            'reference' => '0d1c587401514d17e8f9258a27e23527cb1b06c1',
+            'dev_requirement' => true,
+        ),
+        'sebastian/version' => array(
+            'pretty_version' => '3.0.2',
+            'version' => '3.0.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sebastian/version',
+            'aliases' => array(),
+            'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
+            'dev_requirement' => true,
+        ),
+        'symfony/console' => array(
+            'pretty_version' => 'v5.3.0',
+            'version' => '5.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/console',
+            'aliases' => array(),
+            'reference' => '058553870f7809087fa80fa734704a21b9bcaeb2',
+            'dev_requirement' => true,
+        ),
+        'symfony/deprecation-contracts' => array(
+            'pretty_version' => 'v2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
+            'aliases' => array(),
+            'reference' => '5f38c8804a9e97d23e0c8d63341088cd8a22d627',
+            'dev_requirement' => true,
+        ),
+        'symfony/polyfill-ctype' => array(
+            'pretty_version' => 'v1.23.0',
+            'version' => '1.23.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-ctype',
+            'aliases' => array(),
+            'reference' => '46cd95797e9df938fdd2b03693b5fca5e64b01ce',
+            'dev_requirement' => true,
+        ),
+        'symfony/polyfill-intl-grapheme' => array(
+            'pretty_version' => 'v1.23.0',
+            'version' => '1.23.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-intl-grapheme',
+            'aliases' => array(),
+            'reference' => '24b72c6baa32c746a4d0840147c9715e42bb68ab',
+            'dev_requirement' => true,
+        ),
+        'symfony/polyfill-intl-normalizer' => array(
+            'pretty_version' => 'v1.23.0',
+            'version' => '1.23.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-intl-normalizer',
+            'aliases' => array(),
+            'reference' => '8590a5f561694770bdcd3f9b5c69dde6945028e8',
+            'dev_requirement' => true,
+        ),
+        'symfony/polyfill-mbstring' => array(
+            'pretty_version' => 'v1.23.0',
+            'version' => '1.23.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
+            'aliases' => array(),
+            'reference' => '2df51500adbaebdc4c38dea4c89a2e131c45c8a1',
+            'dev_requirement' => true,
+        ),
+        'symfony/polyfill-php73' => array(
+            'pretty_version' => 'v1.23.0',
+            'version' => '1.23.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-php73',
+            'aliases' => array(),
+            'reference' => 'fba8933c384d6476ab14fb7b8526e5287ca7e010',
+            'dev_requirement' => true,
+        ),
+        'symfony/polyfill-php80' => array(
+            'pretty_version' => 'v1.23.0',
+            'version' => '1.23.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-php80',
+            'aliases' => array(),
+            'reference' => 'eca0bf41ed421bed1b57c4958bab16aa86b757d0',
+            'dev_requirement' => true,
+        ),
+        'symfony/service-contracts' => array(
+            'pretty_version' => 'v2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/service-contracts',
+            'aliases' => array(),
+            'reference' => 'f040a30e04b57fbcc9c6cbcf4dbaa96bd318b9bb',
+            'dev_requirement' => true,
+        ),
+        'symfony/string' => array(
+            'pretty_version' => 'v5.3.0',
+            'version' => '5.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/string',
+            'aliases' => array(),
+            'reference' => 'a9a0f8b6aafc5d2d1c116dcccd1573a95153515b',
+            'dev_requirement' => true,
+        ),
+        'symfony/var-dumper' => array(
+            'pretty_version' => 'v5.2.6',
+            'version' => '5.2.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-dumper',
+            'aliases' => array(),
+            'reference' => '89412a68ea2e675b4e44f260a5666729f77f668e',
+            'dev_requirement' => true,
+        ),
+        'theseer/tokenizer' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../theseer/tokenizer',
+            'aliases' => array(),
+            'reference' => '75a63c33a8577608444246075ea0af0d052e452a',
+            'dev_requirement' => true,
+        ),
+        'vimeo/psalm' => array(
+            'pretty_version' => '4.7.3',
+            'version' => '4.7.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../vimeo/psalm',
+            'aliases' => array(),
+            'reference' => '38c452ae584467e939d55377aaf83b5a26f19dd1',
+            'dev_requirement' => true,
+        ),
+        'webimpress/safe-writer' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../webimpress/safe-writer',
+            'aliases' => array(),
+            'reference' => '5cfafdec5873c389036f14bf832a5efc9390dcdd',
+            'dev_requirement' => false,
+        ),
+        'webmozart/assert' => array(
+            'pretty_version' => '1.10.0',
+            'version' => '1.10.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../webmozart/assert',
+            'aliases' => array(),
+            'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
+            'dev_requirement' => true,
+        ),
+        'webmozart/path-util' => array(
+            'pretty_version' => '2.3.0',
+            'version' => '2.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../webmozart/path-util',
+            'aliases' => array(),
+            'reference' => 'd939f7edc24c9a1bb9c0dee5cb05d8e859490725',
+            'dev_requirement' => true,
+        ),
+        'zendframework/zend-authentication' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.7.0',
+            ),
+        ),
+        'zendframework/zend-cache' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.9.0',
+            ),
+        ),
+        'zendframework/zend-code' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.4.1',
+            ),
+        ),
+        'zendframework/zend-component-installer' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.1.2',
+            ),
+        ),
+        'zendframework/zend-config' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.3.0',
+            ),
+        ),
+        'zendframework/zend-console' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '2.8.0',
+            ),
+        ),
+        'zendframework/zend-db' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.11.0',
+            ),
+        ),
+        'zendframework/zend-developer-tools' => array(
+            'dev_requirement' => true,
+            'replaced' => array(
+                0 => '^2.0.0',
+            ),
+        ),
+        'zendframework/zend-di' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.1.2',
+            ),
+        ),
+        'zendframework/zend-diactoros' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.2.1',
+            ),
+        ),
+        'zendframework/zend-dom' => array(
+            'dev_requirement' => true,
+            'replaced' => array(
+                0 => '^2.7.2',
+            ),
+        ),
+        'zendframework/zend-escaper' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.6.1',
+            ),
+        ),
+        'zendframework/zend-eventmanager' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.2.1',
+            ),
+        ),
+        'zendframework/zend-filter' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.9.2',
+            ),
+        ),
+        'zendframework/zend-form' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.14.3',
+            ),
+        ),
+        'zendframework/zend-http' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.11.2',
+            ),
+        ),
+        'zendframework/zend-hydrator' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.0.2',
+            ),
+        ),
+        'zendframework/zend-i18n' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.10.1',
+            ),
+        ),
+        'zendframework/zend-inputfilter' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.10.1',
+            ),
+        ),
+        'zendframework/zend-json' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.1.2',
+            ),
+        ),
+        'zendframework/zend-loader' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.6.1',
+            ),
+        ),
+        'zendframework/zend-log' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.12.0',
+            ),
+        ),
+        'zendframework/zend-modulemanager' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.8.4',
+            ),
+        ),
+        'zendframework/zend-mvc' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '3.1.1',
+            ),
+        ),
+        'zendframework/zend-mvc-console' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.2.0',
+            ),
+        ),
+        'zendframework/zend-mvc-form' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.0.0',
+            ),
+        ),
+        'zendframework/zend-mvc-i18n' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.1.1',
+            ),
+        ),
+        'zendframework/zend-mvc-plugin-fileprg' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.1.0',
+            ),
+        ),
+        'zendframework/zend-mvc-plugin-flashmessenger' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.2.0',
+            ),
+        ),
+        'zendframework/zend-mvc-plugin-identity' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.1.1',
+            ),
+        ),
+        'zendframework/zend-mvc-plugin-prg' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.2.0',
+            ),
+        ),
+        'zendframework/zend-mvc-plugins' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.0.1',
+            ),
+        ),
+        'zendframework/zend-paginator' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.8.2',
+            ),
+        ),
+        'zendframework/zend-psr7bridge' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^1.2.0',
+            ),
+        ),
+        'zendframework/zend-router' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.3.0',
+            ),
+        ),
+        'zendframework/zend-servicemanager' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.4.0',
+            ),
+        ),
+        'zendframework/zend-session' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.9.1',
+            ),
+        ),
+        'zendframework/zend-stdlib' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^3.2.1',
+            ),
+        ),
+        'zendframework/zend-test' => array(
+            'dev_requirement' => true,
+            'replaced' => array(
+                0 => '^3.3.0',
+            ),
+        ),
+        'zendframework/zend-text' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.7.1',
+            ),
+        ),
+        'zendframework/zend-uri' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.7.1',
+            ),
+        ),
+        'zendframework/zend-validator' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.13.0',
+            ),
+        ),
+        'zendframework/zend-view' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '^2.11.4',
+            ),
+        ),
+        'zfcampus/zf-development-mode' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '3.2.0',
+            ),
+        ),
     ),
-    'reference' => '770f07b6a6a9bcd939e05bfd5a3107a539bdbd31',
-    'name' => 'laminas/laminas-mvc-skeleton',
-  ),
-  'versions' => 
-  array (
-    'brick/varexporter' => 
-    array (
-      'pretty_version' => '0.3.5',
-      'version' => '0.3.5.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '05241f28dfcba2b51b11e2d750e296316ebbe518',
-    ),
-    'container-interop/container-interop' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '79cbf1341c22ec75643d841642dd5d6acd83bdb8',
-    ),
-    'container-interop/container-interop-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '^1.2',
-      ),
-    ),
-    'doctrine/instantiator' => 
-    array (
-      'pretty_version' => '1.3.1',
-      'version' => '1.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f350df0268e904597e3bd9c4685c53e0e333feea',
-    ),
-    'laminas/laminas-authentication' => 
-    array (
-      'pretty_version' => '2.8.0',
-      'version' => '2.8.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0b77d353a3a039d65c15318c98dd055d62f010b6',
-    ),
-    'laminas/laminas-cache' => 
-    array (
-      'pretty_version' => '2.11.2',
-      'version' => '2.11.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f825aecc67f40e8bc499500373e5de700b95d00b',
-    ),
-    'laminas/laminas-cache-storage-adapter-apc' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8b375d994f6e67534f6ae6e995249e706faa30c1',
-    ),
-    'laminas/laminas-cache-storage-adapter-apcu' => 
-    array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'e182aab739d6b03992a9915cc3c7019391a94548',
-    ),
-    'laminas/laminas-cache-storage-adapter-blackhole' => 
-    array (
-      'pretty_version' => '1.2.1',
-      'version' => '1.2.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '4af1053efd81785a292c2a9442871c075700345a',
-    ),
-    'laminas/laminas-cache-storage-adapter-dba' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ad968d3d8a0350af8e6717be58bb96e5a9e77f3b',
-    ),
-    'laminas/laminas-cache-storage-adapter-ext-mongodb' => 
-    array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5810c3ffb442527b8b3429b0d29dce1ddabc92f2',
-    ),
-    'laminas/laminas-cache-storage-adapter-filesystem' => 
-    array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '76fc488c3fa0ad442e4e70f807305c940d1bdcbc',
-    ),
-    'laminas/laminas-cache-storage-adapter-memcache' => 
-    array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '1d2a74e300a0fd0b8d0e0cb4e379a173ccad0088',
-    ),
-    'laminas/laminas-cache-storage-adapter-memcached' => 
-    array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f5d35cc2ef6264c76021bcc798569182103baa91',
-    ),
-    'laminas/laminas-cache-storage-adapter-memory' => 
-    array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '02c7a4a1118bbd47d1c0f0bfe1e8b140af79d2bd',
-    ),
-    'laminas/laminas-cache-storage-adapter-mongodb' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ef4aa396b55533b8eb3e1d4126c39a78a22e49a6',
-    ),
-    'laminas/laminas-cache-storage-adapter-redis' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'de8a63d4a0ef1ccead401eb7fb6d75b57fa3f9ee',
-    ),
-    'laminas/laminas-cache-storage-adapter-session' => 
-    array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '74a275056cfca2300eb9a67cd1d917f7066b4113',
-    ),
-    'laminas/laminas-cache-storage-adapter-wincache' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0f54599c5d9aff11b01adadd2742097f923170ba',
-    ),
-    'laminas/laminas-cache-storage-adapter-xcache' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '24049557aa796ec7527bcc8032ed68346232b219',
-    ),
-    'laminas/laminas-cache-storage-adapter-zend-server' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8d0b0d219a048a92472d89a5e527990f3ea2decc',
-    ),
-    'laminas/laminas-cache-storage-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
-    'laminas/laminas-code' => 
-    array (
-      'pretty_version' => '3.5.1',
-      'version' => '3.5.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b549b70c0bb6e935d497f84f750c82653326ac77',
-    ),
-    'laminas/laminas-component-installer' => 
-    array (
-      'pretty_version' => '2.5.0',
-      'version' => '2.5.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '223d81cf648ff9380bd13cfe07a31324b0ffc8b8',
-    ),
-    'laminas/laminas-config' => 
-    array (
-      'pretty_version' => '3.5.0',
-      'version' => '3.5.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f91cd6fe79e82cbbcaa36485108a04e8ef1e679b',
-    ),
-    'laminas/laminas-console' => 
-    array (
-      'pretty_version' => '2.8.0',
-      'version' => '2.8.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '478a6ceac3e31fb38d6314088abda8b239ee23a5',
-    ),
-    'laminas/laminas-db' => 
-    array (
-      'pretty_version' => '2.12.0',
-      'version' => '2.12.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '80cbba4e749f9eb7d8036172acb9ad41e8b6923f',
-    ),
-    'laminas/laminas-developer-tools' => 
-    array (
-      'pretty_version' => '2.1.1',
-      'version' => '2.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8d9e152e0791fe577e1d0fb63c6a973558f36013',
-    ),
-    'laminas/laminas-development-mode' => 
-    array (
-      'pretty_version' => '3.2.0',
-      'version' => '3.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '203cf2f61dbea1489cb6e0c42ffdc987ebe4f796',
-    ),
-    'laminas/laminas-di' => 
-    array (
-      'pretty_version' => '3.2.2',
-      'version' => '3.2.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ed38ab3b066c0a1f1b087e0a664caadf1d4f8f04',
-    ),
-    'laminas/laminas-diactoros' => 
-    array (
-      'pretty_version' => '2.5.1',
-      'version' => '2.5.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '53df7b7cd66e0905e6133970a4b90392a7a08075',
-    ),
-    'laminas/laminas-dom' => 
-    array (
-      'pretty_version' => '2.7.2',
-      'version' => '2.7.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '631fa74ae6f68e9019b73512f1b3b139d43f3572',
-    ),
-    'laminas/laminas-escaper' => 
-    array (
-      'pretty_version' => '2.7.0',
-      'version' => '2.7.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5e04bc5ae5990b17159d79d331055e2c645e5cc5',
-    ),
-    'laminas/laminas-eventmanager' => 
-    array (
-      'pretty_version' => '3.3.1',
-      'version' => '3.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '966c859b67867b179fde1eff0cd38df51472ce4a',
-    ),
-    'laminas/laminas-filter' => 
-    array (
-      'pretty_version' => '2.11.1',
-      'version' => '2.11.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '671724e163aa75c210e94d12b77a0f3f8240d4b2',
-    ),
-    'laminas/laminas-form' => 
-    array (
-      'pretty_version' => '2.17.0',
-      'version' => '2.17.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '2a18e6724739f3f1875d30a6bb8ecedb3da5242e',
-    ),
-    'laminas/laminas-http' => 
-    array (
-      'pretty_version' => '2.14.3',
-      'version' => '2.14.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'bfaab8093e382274efed7fdc3ceb15f09ba352bb',
-    ),
-    'laminas/laminas-hydrator' => 
-    array (
-      'pretty_version' => '4.1.0',
-      'version' => '4.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'fc201f29280a8308579e7fb4c1fbc2fb3dfdbd8f',
-    ),
-    'laminas/laminas-i18n' => 
-    array (
-      'pretty_version' => '2.11.1',
-      'version' => '2.11.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5e85a8facc5534e856cc7f5b4326533eede84b8a',
-    ),
-    'laminas/laminas-inputfilter' => 
-    array (
-      'pretty_version' => '2.12.0',
-      'version' => '2.12.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b6ab28b425e626b12488fec243e02d36d8dffeff',
-    ),
-    'laminas/laminas-json' => 
-    array (
-      'pretty_version' => '3.2.0',
-      'version' => '3.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '1e3b64d3b21dac0511e628ae8debc81002d14e3c',
-    ),
-    'laminas/laminas-loader' => 
-    array (
-      'pretty_version' => '2.7.0',
-      'version' => '2.7.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'bcf8a566cb9925a2e7cc41a16db09235ec9fb616',
-    ),
-    'laminas/laminas-log' => 
-    array (
-      'pretty_version' => '2.13.1',
-      'version' => '2.13.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '6ac20830d4f324b4662fc454fcc1954436bfced3',
-    ),
-    'laminas/laminas-modulemanager' => 
-    array (
-      'pretty_version' => '2.10.2',
-      'version' => '2.10.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '2068e0b300e87e139112016a6025be341ceaaf33',
-    ),
-    'laminas/laminas-mvc' => 
-    array (
-      'pretty_version' => '3.1.1',
-      'version' => '3.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ead09f8ab5ff0e562dbd0198c7f67523c2f61980',
-    ),
-    'laminas/laminas-mvc-console' => 
-    array (
-      'pretty_version' => '1.3.0',
-      'version' => '1.3.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '90338c7b61a5fa8445c0a41925a4ae351459fa79',
-    ),
-    'laminas/laminas-mvc-form' => 
-    array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c027f5becb817736096d0967c5e42cd7f746d5e4',
-    ),
-    'laminas/laminas-mvc-i18n' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '7ece491a02000a6c4ea2c4457fead3d12efc6eba',
-    ),
-    'laminas/laminas-mvc-plugin-fileprg' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '2d6a64bf916b3f5f26a062b9c62d06af26ee483f',
-    ),
-    'laminas/laminas-mvc-plugin-flashmessenger' => 
-    array (
-      'pretty_version' => '1.3.0',
-      'version' => '1.3.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f7569d05dfd774a2c84328792ee716e2d8b1e33e',
-    ),
-    'laminas/laminas-mvc-plugin-identity' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '75cf6df47aef315521eb390ab1478e586fda4ec8',
-    ),
-    'laminas/laminas-mvc-plugin-prg' => 
-    array (
-      'pretty_version' => '1.3.0',
-      'version' => '1.3.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '943c03a869a1a421ce3c6dc2f034021b247d9b17',
-    ),
-    'laminas/laminas-mvc-plugins' => 
-    array (
-      'pretty_version' => '1.1.0',
-      'version' => '1.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'd127f94f258f9d4ae1a3fa233bead2110cd538a9',
-    ),
-    'laminas/laminas-mvc-skeleton' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '770f07b6a6a9bcd939e05bfd5a3107a539bdbd31',
-    ),
-    'laminas/laminas-paginator' => 
-    array (
-      'pretty_version' => '2.10.0',
-      'version' => '2.10.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '14ce4a397e6329954389cc40aa635caa9573f695',
-    ),
-    'laminas/laminas-psr7bridge' => 
-    array (
-      'pretty_version' => '1.3.1',
-      'version' => '1.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b1158f0574164039f698a261c01c26119cc6dbd6',
-    ),
-    'laminas/laminas-router' => 
-    array (
-      'pretty_version' => '3.4.4',
-      'version' => '3.4.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '2a7068508af4de67d80ea292e0cc7c37563a33c6',
-    ),
-    'laminas/laminas-servicemanager' => 
-    array (
-      'pretty_version' => '3.6.4',
-      'version' => '3.6.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b1445e1a7077c21b0fad0974a1b7a11b9dbe0828',
-    ),
-    'laminas/laminas-session' => 
-    array (
-      'pretty_version' => '2.10.0',
-      'version' => '2.10.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '921e6a9f807ee243a9a4f8a8a297929d0c2b50cd',
-    ),
-    'laminas/laminas-stdlib' => 
-    array (
-      'pretty_version' => '3.3.1',
-      'version' => '3.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'd81c7ffe602ed0e6ecb18691019111c0f4bf1efe',
-    ),
-    'laminas/laminas-test' => 
-    array (
-      'pretty_version' => '3.4.2',
-      'version' => '3.4.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'da508dd32bdedd8f2757887ad7dfed3cf5faea2d',
-    ),
-    'laminas/laminas-text' => 
-    array (
-      'pretty_version' => '2.8.0',
-      'version' => '2.8.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '76fccc8f79a6fb61689e96ab300566c0065deaaa',
-    ),
-    'laminas/laminas-uri' => 
-    array (
-      'pretty_version' => '2.8.1',
-      'version' => '2.8.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '79bd4c614c8cf9a6ba715a49fca8061e84933d87',
-    ),
-    'laminas/laminas-validator' => 
-    array (
-      'pretty_version' => '2.14.4',
-      'version' => '2.14.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'e370c4695db1c81e6dfad38d8c4dbdb37b23d776',
-    ),
-    'laminas/laminas-view' => 
-    array (
-      'pretty_version' => '2.12.0',
-      'version' => '2.12.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3ef103da6887809f08ecf52f42c31a76c9bf08b1',
-    ),
-    'laminas/laminas-zendframework-bridge' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '6cccbddfcfc742eb02158d6137ca5687d92cee32',
-    ),
-    'myclabs/deep-copy' => 
-    array (
-      'pretty_version' => '1.10.1',
-      'version' => '1.10.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '969b211f9a51aa1f6c01d1d2aef56d3bd91598e5',
-      'replaced' => 
-      array (
-        0 => '1.10.1',
-      ),
-    ),
-    'nikic/php-parser' => 
-    array (
-      'pretty_version' => 'v4.10.4',
-      'version' => '4.10.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c6d052fc58cb876152f89f532b95a8d7907e7f0e',
-    ),
-    'phar-io/manifest' => 
-    array (
-      'pretty_version' => '2.0.1',
-      'version' => '2.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '85265efd3af7ba3ca4b2a2c34dbfc5788dd29133',
-    ),
-    'phar-io/version' => 
-    array (
-      'pretty_version' => '3.0.2',
-      'version' => '3.0.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c6bb6825def89e0a32220f88337f8ceaf1975fa0',
-    ),
-    'phpdocumentor/reflection-common' => 
-    array (
-      'pretty_version' => '2.2.0',
-      'version' => '2.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '1d01c49d4ed62f25aa84a747ad35d5a16924662b',
-    ),
-    'phpdocumentor/reflection-docblock' => 
-    array (
-      'pretty_version' => '5.2.2',
-      'version' => '5.2.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '069a785b2141f5bcf49f3e353548dc1cce6df556',
-    ),
-    'phpdocumentor/type-resolver' => 
-    array (
-      'pretty_version' => '1.4.0',
-      'version' => '1.4.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0',
-    ),
-    'phpspec/prophecy' => 
-    array (
-      'pretty_version' => '1.12.1',
-      'version' => '1.12.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8ce87516be71aae9b956f81906aaf0338e0d8a2d',
-    ),
-    'phpunit/php-code-coverage' => 
-    array (
-      'pretty_version' => '9.2.3',
-      'version' => '9.2.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '6b20e2055f7c29b56cb3870b3de7cc463d7add41',
-    ),
-    'phpunit/php-file-iterator' => 
-    array (
-      'pretty_version' => '3.0.5',
-      'version' => '3.0.5.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'aa4be8575f26070b100fccb67faabb28f21f66f8',
-    ),
-    'phpunit/php-invoker' => 
-    array (
-      'pretty_version' => '3.1.1',
-      'version' => '3.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5a10147d0aaf65b58940a0b72f71c9ac0423cc67',
-    ),
-    'phpunit/php-text-template' => 
-    array (
-      'pretty_version' => '2.0.4',
-      'version' => '2.0.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5da5f67fc95621df9ff4c4e5a84d6a8a2acf7c28',
-    ),
-    'phpunit/php-timer' => 
-    array (
-      'pretty_version' => '5.0.3',
-      'version' => '5.0.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5a63ce20ed1b5bf577850e2c4e87f4aa902afbd2',
-    ),
-    'phpunit/phpunit' => 
-    array (
-      'pretty_version' => '9.4.2',
-      'version' => '9.4.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3866b2eeeed21b1b099c4bc0b7a1690ac6fd5baa',
-    ),
-    'psr/cache' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'd11b50ad223250cf17b86e38383413f5a6764bf8',
-    ),
-    'psr/cache-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
-    'psr/container' => 
-    array (
-      'pretty_version' => '1.1.1',
-      'version' => '1.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
-    ),
-    'psr/container-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '^1.0',
-      ),
-    ),
-    'psr/http-factory' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '12ac7fcd07e5b077433f5f2bee95b3a771bf61be',
-    ),
-    'psr/http-factory-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
-    'psr/http-message' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
-    ),
-    'psr/http-message-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
-    'psr/log' => 
-    array (
-      'pretty_version' => '1.1.3',
-      'version' => '1.1.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0f73288fd15629204f9d42b7055f72dacbe811fc',
-    ),
-    'psr/log-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0.0',
-      ),
-    ),
-    'psr/simple-cache' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
-    ),
-    'psr/simple-cache-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
-    'sebastian/cli-parser' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '442e7c7e687e42adc03470c7b668bc4b2402c0b2',
-    ),
-    'sebastian/code-unit' => 
-    array (
-      'pretty_version' => '1.0.8',
-      'version' => '1.0.8.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '1fc9f64c0927627ef78ba436c9b17d967e68e120',
-    ),
-    'sebastian/code-unit-reverse-lookup' => 
-    array (
-      'pretty_version' => '2.0.3',
-      'version' => '2.0.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ac91f01ccec49fb77bdc6fd1e548bc70f7faa3e5',
-    ),
-    'sebastian/comparator' => 
-    array (
-      'pretty_version' => '4.0.6',
-      'version' => '4.0.6.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '55f4261989e546dc112258c7a75935a81a7ce382',
-    ),
-    'sebastian/complexity' => 
-    array (
-      'pretty_version' => '2.0.2',
-      'version' => '2.0.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '739b35e53379900cc9ac327b2147867b8b6efd88',
-    ),
-    'sebastian/diff' => 
-    array (
-      'pretty_version' => '4.0.4',
-      'version' => '4.0.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '3461e3fccc7cfdfc2720be910d3bd73c69be590d',
-    ),
-    'sebastian/environment' => 
-    array (
-      'pretty_version' => '5.1.3',
-      'version' => '5.1.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '388b6ced16caa751030f6a69e588299fa09200ac',
-    ),
-    'sebastian/exporter' => 
-    array (
-      'pretty_version' => '4.0.3',
-      'version' => '4.0.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'd89cc98761b8cb5a1a235a6b703ae50d34080e65',
-    ),
-    'sebastian/global-state' => 
-    array (
-      'pretty_version' => '5.0.2',
-      'version' => '5.0.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'a90ccbddffa067b51f574dea6eb25d5680839455',
-    ),
-    'sebastian/lines-of-code' => 
-    array (
-      'pretty_version' => '1.0.2',
-      'version' => '1.0.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'acf76492a65401babcf5283296fa510782783a7a',
-    ),
-    'sebastian/object-enumerator' => 
-    array (
-      'pretty_version' => '4.0.4',
-      'version' => '4.0.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5c9eeac41b290a3712d88851518825ad78f45c71',
-    ),
-    'sebastian/object-reflector' => 
-    array (
-      'pretty_version' => '2.0.4',
-      'version' => '2.0.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b4f479ebdbf63ac605d183ece17d8d7fe49c15c7',
-    ),
-    'sebastian/recursion-context' => 
-    array (
-      'pretty_version' => '4.0.4',
-      'version' => '4.0.4.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'cd9d8cf3c5804de4341c283ed787f099f5506172',
-    ),
-    'sebastian/resource-operations' => 
-    array (
-      'pretty_version' => '3.0.3',
-      'version' => '3.0.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0f4443cb3a1d92ce809899753bc0d5d5a8dd19a8',
-    ),
-    'sebastian/type' => 
-    array (
-      'pretty_version' => '2.3.1',
-      'version' => '2.3.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '81cd61ab7bbf2de744aba0ea61fae32f721df3d2',
-    ),
-    'sebastian/version' => 
-    array (
-      'pretty_version' => '3.0.2',
-      'version' => '3.0.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
-    ),
-    'symfony/polyfill-ctype' => 
-    array (
-      'pretty_version' => 'v1.20.0',
-      'version' => '1.20.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f4ba089a5b6366e453971d3aad5fe8e897b37f41',
-    ),
-    'symfony/polyfill-mbstring' => 
-    array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5232de97ee3b75b0360528dae24e73db49566ab1',
-    ),
-    'symfony/polyfill-php80' => 
-    array (
-      'pretty_version' => 'v1.22.1',
-      'version' => '1.22.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'dc3063ba22c2a1fd2f45ed856374d79114998f91',
-    ),
-    'symfony/var-dumper' => 
-    array (
-      'pretty_version' => 'v5.2.6',
-      'version' => '5.2.6.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '89412a68ea2e675b4e44f260a5666729f77f668e',
-    ),
-    'theseer/tokenizer' => 
-    array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '75a63c33a8577608444246075ea0af0d052e452a',
-    ),
-    'webimpress/safe-writer' => 
-    array (
-      'pretty_version' => '2.1.0',
-      'version' => '2.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5cfafdec5873c389036f14bf832a5efc9390dcdd',
-    ),
-    'webmozart/assert' => 
-    array (
-      'pretty_version' => '1.9.1',
-      'version' => '1.9.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'bafc69caeb4d49c39fd0779086c03a3738cbb389',
-    ),
-    'zendframework/zend-authentication' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.7.0',
-      ),
-    ),
-    'zendframework/zend-cache' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.9.0',
-      ),
-    ),
-    'zendframework/zend-code' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.4.1',
-      ),
-    ),
-    'zendframework/zend-component-installer' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.1.2',
-      ),
-    ),
-    'zendframework/zend-config' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.3.0',
-      ),
-    ),
-    'zendframework/zend-console' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '2.8.0',
-      ),
-    ),
-    'zendframework/zend-db' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.11.0',
-      ),
-    ),
-    'zendframework/zend-developer-tools' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.0.0',
-      ),
-    ),
-    'zendframework/zend-di' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.1.2',
-      ),
-    ),
-    'zendframework/zend-diactoros' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.2.1',
-      ),
-    ),
-    'zendframework/zend-dom' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '2.7.2',
-      ),
-    ),
-    'zendframework/zend-escaper' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.6.1',
-      ),
-    ),
-    'zendframework/zend-eventmanager' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.2.1',
-      ),
-    ),
-    'zendframework/zend-filter' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.9.2',
-      ),
-    ),
-    'zendframework/zend-form' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.14.3',
-      ),
-    ),
-    'zendframework/zend-http' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.11.2',
-      ),
-    ),
-    'zendframework/zend-hydrator' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.0.2',
-      ),
-    ),
-    'zendframework/zend-i18n' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.10.1',
-      ),
-    ),
-    'zendframework/zend-inputfilter' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.10.1',
-      ),
-    ),
-    'zendframework/zend-json' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.1.2',
-      ),
-    ),
-    'zendframework/zend-loader' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.6.1',
-      ),
-    ),
-    'zendframework/zend-log' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.12.0',
-      ),
-    ),
-    'zendframework/zend-modulemanager' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.8.4',
-      ),
-    ),
-    'zendframework/zend-mvc' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '3.1.1',
-      ),
-    ),
-    'zendframework/zend-mvc-console' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.2.0',
-      ),
-    ),
-    'zendframework/zend-mvc-form' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.0.0',
-      ),
-    ),
-    'zendframework/zend-mvc-i18n' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.1.1',
-      ),
-    ),
-    'zendframework/zend-mvc-plugin-fileprg' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.1.0',
-      ),
-    ),
-    'zendframework/zend-mvc-plugin-flashmessenger' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.2.0',
-      ),
-    ),
-    'zendframework/zend-mvc-plugin-identity' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.1.1',
-      ),
-    ),
-    'zendframework/zend-mvc-plugin-prg' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.2.0',
-      ),
-    ),
-    'zendframework/zend-mvc-plugins' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.0.1',
-      ),
-    ),
-    'zendframework/zend-paginator' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.8.2',
-      ),
-    ),
-    'zendframework/zend-psr7bridge' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^1.2.0',
-      ),
-    ),
-    'zendframework/zend-router' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.3.0',
-      ),
-    ),
-    'zendframework/zend-servicemanager' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.4.0',
-      ),
-    ),
-    'zendframework/zend-session' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.9.1',
-      ),
-    ),
-    'zendframework/zend-stdlib' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.2.1',
-      ),
-    ),
-    'zendframework/zend-test' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^3.3.0',
-      ),
-    ),
-    'zendframework/zend-text' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.7.1',
-      ),
-    ),
-    'zendframework/zend-uri' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.7.1',
-      ),
-    ),
-    'zendframework/zend-validator' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.13.0',
-      ),
-    ),
-    'zendframework/zend-view' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '^2.11.4',
-      ),
-    ),
-    'zfcampus/zf-development-mode' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '3.2.0',
-      ),
-    ),
-  ),
 );
