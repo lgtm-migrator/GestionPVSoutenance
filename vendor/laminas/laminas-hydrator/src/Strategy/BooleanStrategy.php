@@ -1,11 +1,5 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-hydrator for the canonical source repository
- * @copyright https://github.com/laminas/laminas-hydrator/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
- */
-
 declare(strict_types=1);
 
 namespace Laminas\Hydrator\Strategy;
@@ -22,17 +16,15 @@ use function sprintf;
 
 /**
  * This Strategy extracts and hydrates int and string values to Boolean values
+ *
+ * @deprecated Since version 4.2.0; use the {@see ScalarTypeStrategy} instead.
  */
 final class BooleanStrategy implements StrategyInterface
 {
-    /**
-     * @var int|string
-     */
+    /** @var int|string */
     private $trueValue;
 
-    /**
-     * @var int|string
-     */
+    /** @var int|string */
     private $falseValue;
 
     /**
