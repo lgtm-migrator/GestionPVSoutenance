@@ -1,17 +1,12 @@
 <?php
 
-/**
- * @see       https://github.com/laminas/laminas-hydrator for the canonical source repository
- * @copyright https://github.com/laminas/laminas-hydrator/blob/master/COPYRIGHT.md
- * @license   https://github.com/laminas/laminas-hydrator/blob/master/LICENSE.md New BSD License
- */
-
 declare(strict_types=1);
 
 namespace Laminas\Hydrator;
 
 use Laminas\Stdlib\ArrayUtils;
 use Traversable;
+use Webmozart\Assert\Assert;
 
 use function get_class;
 use function get_class_methods;
@@ -19,6 +14,8 @@ use function is_callable;
 use function lcfirst;
 use function method_exists;
 use function property_exists;
+use function spl_object_hash;
+use function sprintf;
 use function strpos;
 use function substr;
 use function ucfirst;
@@ -56,10 +53,8 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
      */
     private $extractionMethodsCache = [];
 
-    /**
-     * @var Filter\FilterInterface
-     */
-    private $callableMethodFilter;
+    /** @var Filter\FilterInterface */
+    private $optionalParametersFilter;
 
     /**
      * Define if extract values will use camel case or name with underscore
@@ -69,23 +64,18 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
         $this->setUnderscoreSeparatedKeys($underscoreSeparatedKeys);
         $this->setMethodExistsCheck($methodExistsCheck);
 
-        $this->callableMethodFilter = new Filter\OptionalParametersFilter();
+        $this->optionalParametersFilter = new Filter\OptionalParametersFilter();
 
         $compositeFilter = $this->getCompositeFilter();
         $compositeFilter->addFilter('is', new Filter\IsFilter());
         $compositeFilter->addFilter('has', new Filter\HasFilter());
         $compositeFilter->addFilter('get', new Filter\GetFilter());
-        $compositeFilter->addFilter(
-            'parameter',
-            new Filter\OptionalParametersFilter(),
-            Filter\FilterComposite::CONDITION_AND
-        );
     }
 
     /**
      * @param mixed[] $options
      */
-    public function setOptions(iterable $options) : void
+    public function setOptions(iterable $options): void
     {
         if ($options instanceof Traversable) {
             $options = ArrayUtils::iteratorToArray($options);
@@ -100,7 +90,7 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
         }
     }
 
-    public function setUnderscoreSeparatedKeys(bool $underscoreSeparatedKeys) : void
+    public function setUnderscoreSeparatedKeys(bool $underscoreSeparatedKeys): void
     {
         $this->underscoreSeparatedKeys = $underscoreSeparatedKeys;
 
@@ -115,17 +105,17 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
         }
     }
 
-    public function getUnderscoreSeparatedKeys() : bool
+    public function getUnderscoreSeparatedKeys(): bool
     {
         return $this->underscoreSeparatedKeys;
     }
 
-    public function setMethodExistsCheck(bool $methodExistsCheck) : void
+    public function setMethodExistsCheck(bool $methodExistsCheck): void
     {
         $this->methodExistsCheck = $methodExistsCheck;
     }
 
-    public function getMethodExistsCheck() : bool
+    public function getMethodExistsCheck(): bool
     {
         return $this->methodExistsCheck;
     }
@@ -137,7 +127,7 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
      *
      * {@inheritDoc}
      */
-    public function extract(object $object) : array
+    public function extract(object $object): array
     {
         $objectClass = get_class($object);
         $isAnonymous = false !== strpos($objectClass, '@anonymous');
@@ -163,8 +153,9 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
                     ? $method
                     : $objectClass . '::' . $method;
 
-                if (! $filter->filter($methodFqn, $isAnonymous ? $object : null)
-                    || ! $this->callableMethodFilter->filter($methodFqn, $isAnonymous ? $object : null)
+                if (
+                    ! $filter->filter($methodFqn, $isAnonymous ? $object : null)
+                    || ! $this->optionalParametersFilter->filter($methodFqn, $isAnonymous ? $object : null)
                 ) {
                     continue;
                 }
@@ -175,20 +166,34 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
 
         $values = [];
 
-        if (null === $this->extractionMethodsCache[$objectClass]) {
+        if (
+            null === $this->extractionMethodsCache[$objectClass]
+            || [] === $this->extractionMethodsCache[$objectClass]
+        ) {
             return $values;
         }
 
         // pass 2 - actually extract data
         foreach ($this->extractionMethodsCache[$objectClass] as $methodName => $attributeName) {
-            $realAttributeName          = $this->extractName($attributeName, $object);
+            $realAttributeName = $this->extractName($attributeName, $object);
+            Assert::stringNotEmpty($methodName);
+
+            if (! method_exists($object, $methodName)) {
+                throw new Exception\BadMethodCallException(sprintf(
+                    'Cannot extract data for attribute "%s" on class of type "%s"; method "%s" does not exist',
+                    $realAttributeName,
+                    get_class($object),
+                    $methodName
+                ));
+            }
+
             $values[$realAttributeName] = $this->extractValue($realAttributeName, $object->$methodName(), $object);
         }
 
         return $values;
     }
 
-    private function initCompositeFilter(object $object) : Filter\FilterComposite
+    private function initCompositeFilter(object $object): Filter\FilterComposite
     {
         if ($object instanceof Filter\FilterProviderInterface) {
             return new Filter\FilterComposite(
@@ -200,7 +205,7 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
         return $this->getCompositeFilter();
     }
 
-    private function identifyAttributeName(object $object, string $method) : string
+    private function identifyAttributeName(object $object, string $method): string
     {
         if (strpos($method, 'get') === 0) {
             $attribute = substr($method, 3);
@@ -243,7 +248,7 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
     /**
      * {@inheritDoc}
      */
-    public function addFilter(string $name, $filter, int $condition = Filter\FilterComposite::CONDITION_OR) : void
+    public function addFilter(string $name, $filter, int $condition = Filter\FilterComposite::CONDITION_OR): void
     {
         $this->resetCaches();
         parent::addFilter($name, $filter, $condition);
@@ -252,7 +257,7 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
     /**
      * {@inheritDoc}
      */
-    public function removeFilter(string $name) : void
+    public function removeFilter(string $name): void
     {
         $this->resetCaches();
         parent::removeFilter($name);
@@ -261,7 +266,7 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
     /**
      * {@inheritDoc}
      */
-    public function setNamingStrategy(NamingStrategy\NamingStrategyInterface $strategy) : void
+    public function setNamingStrategy(NamingStrategy\NamingStrategyInterface $strategy): void
     {
         $this->resetCaches();
         parent::setNamingStrategy($strategy);
@@ -270,7 +275,7 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
     /**
      * {@inheritDoc}
      */
-    public function removeNamingStrategy() : void
+    public function removeNamingStrategy(): void
     {
         $this->resetCaches();
         parent::removeNamingStrategy();
@@ -279,7 +284,7 @@ class ClassMethodsHydrator extends AbstractHydrator implements HydratorOptionsIn
     /**
      * Reset all local hydration/extraction caches
      */
-    private function resetCaches() : void
+    private function resetCaches(): void
     {
         $this->hydrationMethodsCache = $this->extractionMethodsCache = [];
     }
