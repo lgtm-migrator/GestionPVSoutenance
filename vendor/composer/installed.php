@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '7666133efd4aff7a27676771f0171b2648411d01',
+        'reference' => 'd0e736d3788d9580661a8172ef91e76992fc827b',
         'name' => 'laminas/laminas-mvc-skeleton',
         'dev' => true,
     ),
@@ -257,12 +257,12 @@
             'dev_requirement' => true,
         ),
         'laminas/laminas-development-mode' => array(
-            'pretty_version' => '3.2.0',
-            'version' => '3.2.0.0',
+            'pretty_version' => '3.3.0',
+            'version' => '3.3.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-development-mode',
             'aliases' => array(),
-            'reference' => '203cf2f61dbea1489cb6e0c42ffdc987ebe4f796',
+            'reference' => '11b2adc8837e4419a5b31e2a7ae59f06636d4096',
             'dev_requirement' => false,
         ),
         'laminas/laminas-di' => array(
@@ -487,7 +487,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '7666133efd4aff7a27676771f0171b2648411d01',
+            'reference' => 'd0e736d3788d9580661a8172ef91e76992fc827b',
             'dev_requirement' => false,
         ),
         'laminas/laminas-paginator' => array(
@@ -1279,7 +1279,7 @@
         'zfcampus/zf-development-mode' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.2.0',
+                0 => '^3.2.0',
             ),
         ),
     ),
