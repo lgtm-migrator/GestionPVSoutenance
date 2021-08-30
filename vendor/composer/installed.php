@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd0e736d3788d9580661a8172ef91e76992fc827b',
+        'reference' => 'b5de38f898df64f2ec45036447b3dad4f6b55a78',
         'name' => 'laminas/laminas-mvc-skeleton',
         'dev' => true,
     ),
@@ -293,12 +293,12 @@
             'dev_requirement' => true,
         ),
         'laminas/laminas-escaper' => array(
-            'pretty_version' => '2.7.0',
-            'version' => '2.7.0.0',
+            'pretty_version' => '2.8.0',
+            'version' => '2.8.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-escaper',
             'aliases' => array(),
-            'reference' => '5e04bc5ae5990b17159d79d331055e2c645e5cc5',
+            'reference' => '2d6dce99668b413610e9544183fa10392437f542',
             'dev_requirement' => false,
         ),
         'laminas/laminas-eventmanager' => array(
@@ -401,12 +401,12 @@
             'dev_requirement' => false,
         ),
         'laminas/laminas-mvc' => array(
-            'pretty_version' => '3.1.1',
-            'version' => '3.1.1.0',
+            'pretty_version' => '3.2.0',
+            'version' => '3.2.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-mvc',
             'aliases' => array(),
-            'reference' => 'ead09f8ab5ff0e562dbd0198c7f67523c2f61980',
+            'reference' => '88da7200cf8f5a970c35d91717a5c4db94981e5e',
             'dev_requirement' => false,
         ),
         'laminas/laminas-mvc-console' => array(
@@ -487,7 +487,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd0e736d3788d9580661a8172ef91e76992fc827b',
+            'reference' => 'b5de38f898df64f2ec45036447b3dad4f6b55a78',
             'dev_requirement' => false,
         ),
         'laminas/laminas-paginator' => array(
@@ -509,12 +509,12 @@
             'dev_requirement' => false,
         ),
         'laminas/laminas-router' => array(
-            'pretty_version' => '3.4.4',
-            'version' => '3.4.4.0',
+            'pretty_version' => '3.4.5',
+            'version' => '3.4.5.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-router',
             'aliases' => array(),
-            'reference' => '2a7068508af4de67d80ea292e0cc7c37563a33c6',
+            'reference' => 'aaf2eb364eedeb5c4d5b9ee14cd2938d0f7e89b7',
             'dev_requirement' => false,
         ),
         'laminas/laminas-servicemanager' => array(
@@ -572,12 +572,12 @@
             'dev_requirement' => false,
         ),
         'laminas/laminas-validator' => array(
-            'pretty_version' => '2.14.4',
-            'version' => '2.14.4.0',
+            'pretty_version' => '2.14.5',
+            'version' => '2.14.5.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-validator',
             'aliases' => array(),
-            'reference' => 'e370c4695db1c81e6dfad38d8c4dbdb37b23d776',
+            'reference' => '4680bc4241cb5b3ff78954c421fe43105ca413b7',
             'dev_requirement' => false,
         ),
         'laminas/laminas-view' => array(
@@ -611,12 +611,12 @@
             ),
         ),
         'nikic/php-parser' => array(
-            'pretty_version' => 'v4.10.5',
-            'version' => '4.10.5.0',
+            'pretty_version' => 'v4.12.0',
+            'version' => '4.12.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nikic/php-parser',
             'aliases' => array(),
-            'reference' => '4432ba399e47c66624bc73c8c0f811e5c109576f',
+            'reference' => '6608f01670c3cc5079e18c1dab1104e002579143',
             'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(
@@ -1007,12 +1007,12 @@
             'dev_requirement' => true,
         ),
         'webimpress/safe-writer' => array(
-            'pretty_version' => '2.1.0',
-            'version' => '2.1.0.0',
+            'pretty_version' => '2.2.0',
+            'version' => '2.2.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../webimpress/safe-writer',
             'aliases' => array(),
-            'reference' => '5cfafdec5873c389036f14bf832a5efc9390dcdd',
+            'reference' => '9d37cc8bee20f7cb2f58f6e23e05097eab5072e6',
             'dev_requirement' => false,
         ),
         'webmozart/assert' => array(
@@ -1165,7 +1165,7 @@
         'zendframework/zend-mvc' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => '3.1.1',
+                0 => '^3.1.1',
             ),
         ),
         'zendframework/zend-mvc-console' => array(
