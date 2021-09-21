@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "856996818470b5804d6af426ef1d6d95",
+    "content-hash": "5b898c3aebae0d3fc7317ede4df9d987",
     "packages": [
         {
             "name": "brick/varexporter",
@@ -1608,40 +1608,37 @@
         },
         {
             "name": "laminas/laminas-di",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-di.git",
-                "reference": "ed38ab3b066c0a1f1b087e0a664caadf1d4f8f04"
+                "reference": "83330af17fc2511231e805a3586d51883a452094"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-di/zipball/ed38ab3b066c0a1f1b087e0a664caadf1d4f8f04",
-                "reference": "ed38ab3b066c0a1f1b087e0a664caadf1d4f8f04",
+                "url": "https://api.github.com/repos/laminas/laminas-di/zipball/83330af17fc2511231e805a3586d51883a452094",
+                "reference": "83330af17fc2511231e805a3586d51883a452094",
                 "shasum": ""
             },
             "require": {
-                "laminas/laminas-stdlib": "^3.3",
-                "laminas/laminas-zendframework-bridge": "^0.4.5 || ^1.0",
-                "php": "^7.3 || ~8.0.0",
-                "psr/container": "^1.0",
-                "psr/log": "^1.0"
+                "laminas/laminas-stdlib": "^3.6",
+                "php": "^7.3 || ~8.0.0 || ~8.1.0",
+                "psr/container": "^1.1.1",
+                "psr/log": "^1.1.4"
             },
             "conflict": {
                 "laminas/laminas-servicemanager-di": "*",
-                "phpspec/prophecy": "<1.9.0"
-            },
-            "replace": {
-                "zendframework/zend-di": "^3.1.2"
+                "phpspec/prophecy": "<1.9.0",
+                "zendframework/zend-di": "*"
             },
             "require-dev": {
                 "container-interop/container-interop": "^1.2.0",
-                "laminas/laminas-coding-standard": "^2",
-                "laminas/laminas-servicemanager": "^3.4",
-                "mikey179/vfsstream": "^1.6.7",
+                "laminas/laminas-coding-standard": "~2.3.0",
+                "laminas/laminas-servicemanager": "^3.7",
+                "mikey179/vfsstream": "^1.6.10@alpha",
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpstan/phpstan": "^0.12.64",
-                "phpunit/phpunit": "^9.3"
+                "phpunit/phpunit": "^9.5.5"
             },
             "suggest": {
                 "laminas/laminas-servicemanager": "An IoC container without auto wiring capabilities"
@@ -1683,7 +1680,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-04-13T19:22:31+00:00"
+            "time": "2021-09-21T15:41:36+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
