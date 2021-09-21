@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '5e8b2e02699d5fb7d1089d8a33d5383d8d2d95ec',
+        'reference' => '9f8df24e975850a8a8c035673bdd4872ca07dc07',
         'name' => 'laminas/laminas-mvc-skeleton',
         'dev' => true,
     ),
@@ -266,12 +266,12 @@
             'dev_requirement' => false,
         ),
         'laminas/laminas-di' => array(
-            'pretty_version' => '3.2.2',
-            'version' => '3.2.2.0',
+            'pretty_version' => '3.3.0',
+            'version' => '3.3.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../laminas/laminas-di',
             'aliases' => array(),
-            'reference' => 'ed38ab3b066c0a1f1b087e0a664caadf1d4f8f04',
+            'reference' => '83330af17fc2511231e805a3586d51883a452094',
             'dev_requirement' => false,
         ),
         'laminas/laminas-diactoros' => array(
@@ -487,7 +487,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '5e8b2e02699d5fb7d1089d8a33d5383d8d2d95ec',
+            'reference' => '9f8df24e975850a8a8c035673bdd4872ca07dc07',
             'dev_requirement' => false,
         ),
         'laminas/laminas-paginator' => array(
@@ -1064,12 +1064,6 @@
             'dev_requirement' => true,
             'replaced' => array(
                 0 => '^2.0.0',
-            ),
-        ),
-        'zendframework/zend-di' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => '^3.1.2',
             ),
         ),
         'zendframework/zend-diactoros' => array(
