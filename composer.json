@@ -14,7 +14,7 @@
         "laminas/laminas-component-installer": "2.5.1",
         "laminas/laminas-development-mode": "3.5.0",
         "laminas/laminas-mvc": "3.3.0",
-        "laminas/laminas-cache": "2.13.2",
+        "laminas/laminas-cache": "3.0.0",
         "laminas/laminas-db": "2.13.4",
         "laminas/laminas-mvc-form": "2.0.0",
         "laminas/laminas-json": "3.3.0",
